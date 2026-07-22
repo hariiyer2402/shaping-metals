@@ -23,7 +23,7 @@ import poojaroom2 from '../assets/images/poojaroom/pooja2.jpg';
 import poojaroom3 from '../assets/images/poojaroom/pooja3.jpg';
 
 import Mantapam1 from '../assets/images/Mantapam/mantap1.jpg';
-import Mantapam2 from '../assets/images/Mantapam/mantap3.jpg';
+import Mantapam2 from '../assets/images/Mantapam/mantap5.jpg';
 import Mantapam3 from '../assets/images/Mantapam/mantap4.jpg';
 
 import PHandles1 from '../assets/images/Pull Handles/phandles1.jpg';
