@@ -1,10 +1,11 @@
 import { Target, Users, Lightbulb, Hammer } from 'lucide-react';
+<link rel="icon" type="image/png" href="/logo.png" />
 import heroImg from '../assets/images/gates/gate9.jpg';
 import storyImg from '../assets/images/gates/gate10.jpg';
-import craft1 from '../assets/images/railings/railing4.jpg';
-import craft2 from '../assets/images/murals/mural2.jpg';
-import about1 from '../assets/images/about/about2.jpg';
-import about2 from '../assets/images/about/about4.jpg';
+import craft1 from '../assets/images/MD 3 Template/MD 2 Template.jpg';
+import craft2 from '../assets/images/Partition Grills 3 Template/Partition Grills 2 Template.jpg';
+import about1 from '../assets/images/miror 3 Template/miror 2 Template.jpg';
+import about2 from '../assets/images/Vaskal 3 Template/Vaskal 2 Template.jpg';
 
 import { useSEO } from '../hooks/useSEO';
 
@@ -41,14 +42,14 @@ export default function About({ onNavigate }: AboutProps) {
   ];
 
   const expertise = [
-    { number: '25+', label: 'Years Experience' },
-    { number: '500+', label: 'Projects Completed' },
+    { number: '6+', label: 'Years Experience' },
+    { number: '100%', label: 'Custom Fabrication' },
     { number: '15', label: 'Master Craftsmen' },
     { number: '100%', label: 'Client Satisfaction' },
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -79,13 +80,13 @@ export default function About({ onNavigate }: AboutProps) {
                 Our Story
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Founded in 2010, Shaping Metals began as a small workshop driven by a passion for transforming raw metal into extraordinary works of art. What started with just three craftsmen and a vision has grown into one of the most respected names in bespoke metal fabrication across South India.
+                Founded in 2020, Shaping Metals began as a small workshop driven by a passion for transforming raw metal into extraordinary works of art. What started with just three craftsmen and a vision has grown into one of the most respected names in bespoke metal fabrication across South India.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Our journey has been defined by an unwavering commitment to quality and innovation. We have had the privilege of working on landmark projects — from luxury residences in Hyderabad and Bangalore to commercial spaces in Mumbai and Delhi — each one pushing us to refine our craft further.
+                Our journey has been defined by an unwavering commitment to quality and innovation. We have had the privilege of working on landmark projects across PAN India, from luxury residences to commercial spaces, with each project pushing us to refine our craft further.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Today, we combine traditional metalworking techniques with modern engineering, allowing us to bring even the most ambitious designs to life. Our team of master craftsmen doesn't just fabricate metal — we sculpt, we engineer, we create lasting impressions.
+                Today, we combine traditional metalworking techniques with modern engineering, allowing us to bring even the most ambitious designs to life. Our team of master craftsmen doesn't just fabricate metal; we sculpt, we engineer, and we create lasting impressions.
               </p>
             </div>
 
@@ -186,7 +187,7 @@ export default function About({ onNavigate }: AboutProps) {
       <section className="py-12 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1E2A38] text-center mb-12">
-            Our Installations
+            Mirror Frames
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <img

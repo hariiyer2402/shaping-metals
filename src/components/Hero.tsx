@@ -1,9 +1,16 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, ChevronDown, Play } from "lucide-react";
+import craftsmanshipVideo from "../assets/hero_vid/Video Project.mp4";
+<link rel="icon" type="image/png" href="/logo.png" />
 
 import img1 from "../assets/images/gates/gate1.jpg";
 import img2 from "../assets/images/railings/railing4.jpg";
 import img3 from "../assets/images/murals/mural2.jpg";
+
+import img4 from "../assets/images/accessories/acc1.jpg";
+import img5 from "../assets/images/railings/railing8.jpg";
+import img6 from "../assets/images/accessories/acc4.jpg";
+import img7 from "../assets/images/accessories/acc11.jpg";
 
 import img1Mobile from "../assets/images/gates/gate2.jpg";
 import img2Mobile from "../assets/images/railings/railing3.jpg";
@@ -16,28 +23,29 @@ const featuredCategories = [
   {
     id: "gates",
     name: "Royal Gates",
-    image: img1,
+    image: img6,
   },
   {
     id: "railings",
     name: "Elegant Railings",
-    image: img2,
+    image: img5,
   },
   {
     id: "murals",
     name: "Wall Murals",
-    image: img3,
+    image: img4,
   },
   {
     id: "accessories",
     name: "Metal Accessories",
-    image: img1,
+    image: img7,
   },
 ];
 
 export default function Hero({ onNavigate }: HeroProps) {
   const [current, setCurrent] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [playVideo, setPlayVideo] = useState(false);
 
   const heroSlides = [
     {
@@ -232,7 +240,7 @@ export default function Hero({ onNavigate }: HeroProps) {
         {/* Side Text */}
         <div className="absolute right-8 lg:right-16 top-1/2 -translate-y-1/2 z-20 hidden lg:block">
           <p className="text-white/40 text-xs uppercase tracking-[0.4em] font-sans rotate-90 origin-center whitespace-nowrap">
-            Shaping Metals Since 1989
+            Shaping Metals Since 2020
           </p>
         </div>
 
@@ -263,7 +271,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             {featuredCategories.map((category, index) => (
               <div
                 key={category.id}
-                onClick={() => onNavigate("gallery")}
+                onClick={() => onNavigate("projects")}
                 className="group relative overflow-hidden cursor-pointer aspect-[3/4]"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
@@ -303,7 +311,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           {/* View All Button */}
           <div className="text-center mt-12">
             <button
-              onClick={() => onNavigate("gallery")}
+              onClick={() => onNavigate("projects")}
               className="group inline-flex items-center gap-4 text-primary-navy hover:text-primary-gold transition-colors duration-500"
             >
               <span className="text-sm uppercase tracking-[0.3em] font-sans">
@@ -338,18 +346,18 @@ export default function Hero({ onNavigate }: HeroProps) {
                 Three Decades of Excellence
               </h2>
               <p className="text-white/70 text-lg font-sans font-light leading-relaxed mb-8">
-                Since 1989, we have been the premier destination for luxury metal artistry. 
+                Since 2020, we have been the premier destination for luxury metal artistry. 
                 Our master craftsmen combine traditional techniques with contemporary innovation 
                 to create pieces that define spaces and inspire awe.
               </p>
               <div className="flex gap-12 mb-10">
                 <div>
-                  <p className="text-primary-gold font-serif text-4xl md:text-5xl">35+</p>
+                  <p className="text-primary-gold font-serif text-4xl md:text-5xl">6+</p>
                   <p className="text-white/50 text-sm uppercase tracking-wider font-sans mt-1">Years</p>
                 </div>
                 <div>
-                  <p className="text-primary-gold font-serif text-4xl md:text-5xl">500+</p>
-                  <p className="text-white/50 text-sm uppercase tracking-wider font-sans mt-1">Projects</p>
+                  <p className="text-primary-gold font-serif text-4xl md:text-5xl">100%</p>
+                  <p className="text-white/50 text-sm uppercase tracking-wider font-sans mt-1">Custom Fabrication</p>
                 </div>
                 <div>
                   <p className="text-primary-gold font-serif text-4xl md:text-5xl">50+</p>
@@ -370,17 +378,44 @@ export default function Hero({ onNavigate }: HeroProps) {
             {/* Video Play Button */}
             <div className="relative">
               <div className="aspect-video relative overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80"
-                  alt="Craftsmanship Video"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black/30" />
-                <button className="absolute inset-0 flex items-center justify-center group">
-                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary-gold flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                    <Play size={32} className="text-primary-navy ml-1" fill="currentColor" />
+                  <div className="aspect-video relative overflow-hidden rounded-lg">
+
+                    {!playVideo ? (
+                      <>
+                        <img
+                          src={img1}
+                          alt="Craftsmanship"
+                          className="w-full h-full object-cover"
+                        />
+
+                        <div className="absolute inset-0 bg-black/30" />
+                    
+                        <button
+                          onClick={() => setPlayVideo(true)}
+                          className="absolute inset-0 flex items-center justify-center group"
+                        >
+                          <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary-gold flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                            <Play
+                              size={32}
+                              className="text-primary-navy ml-1"
+                              fill="currentColor"
+                            />
+                          </div>
+                        </button>
+                      </>
+                    ) : (
+                      <video
+                        className="w-full h-full object-cover"
+                        controls
+                        autoPlay
+                        onEnded={() => setPlayVideo(false)}
+                      >
+                        <source src={craftsmanshipVideo} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    )}
+
                   </div>
-                </button>
               </div>
               {/* Corner Decorations */}
               <div className="absolute -top-4 -left-4 w-12 h-12 border-l-2 border-t-2 border-primary-gold" />

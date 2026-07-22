@@ -1,38 +1,54 @@
 import { useState } from 'react';
+<link rel="icon" type="image/png" href="/logo.png" />
 
-import proj1 from '../assets/images/projects/proj1.jpg';
-import proj2 from '../assets/images/projects/proj2.jpg';
-import proj3 from '../assets/images/projects/proj3.jpg';
-import proj4 from '../assets/images/projects/proj4.jpg';
-import proj5 from '../assets/images/projects/proj5.jpg';
-import proj6 from '../assets/images/projects/proj6.jpg';
-import proj7 from '../assets/images/projects/proj7.jpg';
-import proj8 from '../assets/images/projects/proj8.jpg';
-import proj9 from '../assets/images/projects/proj9.jpg';
-import proj10 from '../assets/images/projects/proj10.jpg';
-import proj11 from '../assets/images/projects/proj11.jpg';
-import proj12 from '../assets/images/projects/proj12.jpg';
 
 import gate1 from '../assets/images/gates/gate1.jpg';
 import gate2 from '../assets/images/gates/gate2.jpg';
 import gate3 from '../assets/images/gates/gate3.jpg';
-import gate5 from '../assets/images/gates/gate5.jpg';
-import gate6 from '../assets/images/gates/gate6.jpg';
-import gate7 from '../assets/images/gates/gate7.jpg';
 
-import railing1 from '../assets/images/railings/railing1.jpg';
-import railing3 from '../assets/images/railings/railing3.jpg';
-import railing4 from '../assets/images/railings/railing4.jpg';
-import railing5 from '../assets/images/railings/railing5.jpg';
+import railing1 from '../assets/images/railings/railing2.jpg';
+import railing3 from '../assets/images/railings/railing5.jpg';
+import railing4 from '../assets/images/railings/railing7.jpg';
 
 import mural1 from '../assets/images/murals/mural1.jpg';
-import mural2 from '../assets/images/murals/mural2.jpg';
-import mural3 from '../assets/images/murals/mural3.jpg';
-import mural4 from '../assets/images/murals/mural4.jpg';
+import mural2 from '../assets/images/murals/mural3.jpg';
+import mural3 from '../assets/images/murals/mural4.jpg';
 
-import acc1 from '../assets/images/accessories/acc1.jpg';
-import acc2 from '../assets/images/accessories/acc2.jpg';
-import acc5 from '../assets/images/accessories/acc5.jpg';
+import nameboard1 from '../assets/images/nameboard/name1.jpg';
+import nameboard2 from '../assets/images/nameboard/name2.jpg';
+import nameboard3 from '../assets/images/nameboard/name3.jpg';
+
+import poojaroom1 from '../assets/images/poojaroom/pooja1.jpg';
+import poojaroom2 from '../assets/images/poojaroom/pooja2.jpg';
+import poojaroom3 from '../assets/images/poojaroom/pooja3.jpg';
+
+import Mantapam1 from '../assets/images/Mantapam/mantap1.jpg';
+import Mantapam2 from '../assets/images/Mantapam/mantap3.jpg';
+import Mantapam3 from '../assets/images/Mantapam/mantap4.jpg';
+
+import PHandles1 from '../assets/images/Pull Handles/phandles1.jpg';
+import PHandles2 from '../assets/images/Pull Handles/phandles2.jpg';
+import PHandles3 from '../assets/images/Pull Handles/phandles3.jpg';
+
+import Vaskals1 from '../assets/images/Vaskal/vaskal1.jpg';
+import Vaskals2 from '../assets/images/Vaskal/vaskal2.jpg';
+import Vaskals3 from '../assets/images/Vaskal/vaskal3.jpg';
+
+import Partition1 from '../assets/images/PGrills/PG1.jpg';
+import Partition2 from '../assets/images/PGrills/PG2.jpg';
+import Partition3 from '../assets/images/PGrills/PG4.jpg';
+
+import GateD1 from '../assets/images/Gate/g1.jpg';
+import GateD2 from '../assets/images/Gate/g2.jpg';
+import GateD3 from '../assets/images/Gate/g3.jpg';
+
+import accc1 from '../assets/images/accessories/acc1.jpg';
+import accc2 from '../assets/images/accessories/acc5.jpg';
+import accc3 from '../assets/images/accessories/acc11.jpg';
+import accc4 from '../assets/images/accessories/acc12.jpg';
+import accc5 from '../assets/images/accessories/acc13.jpg';
+import accc6 from '../assets/images/accessories/acc14.jpg';
+
 
 import { useSEO } from '../hooks/useSEO';
 
@@ -47,38 +63,56 @@ export default function Projects({ onNavigate }: ProjectsProps) {
   });
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const categories = ['all', 'gates', 'railings', 'murals', 'accessories', 'installations'];
+  const categories = ['all', 'Entrance', 'railings', 'murals', 'Name Board', 'Pooja Room',  'Mantapam 3D Designs', 'Pull Handles',  'Vaskal Designs',  'Partition Grills',  'Gate Designs',  'Accessories'];
 
   const projects = [
-    { id: 1, image: gate1, title: 'Grand Main Door', category: 'gates', description: 'Premium steel main door with ornamental detailing — Hyderabad' },
-    { id: 2, image: gate2, title: 'Heritage Entrance Gate', category: 'gates', description: 'Classic wrought iron gate with custom panels — Bangalore' },
-    { id: 3, image: gate3, title: 'Steel Entry Gate', category: 'gates', description: 'Precision-crafted steel gate for a luxury villa — Chennai' },
-    { id: 4, image: gate5, title: 'Ornamental Main Door', category: 'gates', description: 'Hand-forged ornamental main door — Hyderabad' },
-    { id: 5, image: gate6, title: 'Designer Entry Gate', category: 'gates', description: 'Contemporary designer gate for a modern home — Vizag' },
-    { id: 6, image: gate7, title: 'Premium Wrought Gate', category: 'gates', description: 'Premium wrought iron gate with gold finish trims — Pune' },
-    { id: 7, image: railing1, title: 'Ornamental Staircase Railing', category: 'railings', description: 'Elegant ornamental railing for a grand staircase — Hyderabad' },
-    { id: 8, image: railing3, title: 'Classic Wrought Iron Railing', category: 'railings', description: 'Traditional wrought iron balustrade — Delhi' },
-    { id: 9, image: railing4, title: 'Premium Steel Balustrade', category: 'railings', description: 'Modern steel balustrade for a duplex apartment — Mumbai' },
-    { id: 10, image: railing5, title: 'Designer Handle Collection', category: 'railings', description: 'Custom-designed handle collection — Chennai' },
-    { id: 11, image: mural1, title: 'Nature Inspired Wall Mural', category: 'murals', description: 'Hand-crafted metal mural with nature motifs — Hyderabad' },
-    { id: 12, image: mural2, title: 'Heritage Metal Artwork', category: 'murals', description: 'Intricate heritage artwork panel — Bangalore' },
-    { id: 13, image: mural3, title: 'Abstract Metal Mural', category: 'murals', description: 'Contemporary abstract mural for a corporate lobby — Mumbai' },
-    { id: 14, image: mural4, title: 'Textured Bronze Mural', category: 'murals', description: 'Textured bronze feature wall — Chennai' },
-    { id: 15, image: acc1, title: 'Designer Metal Accessory', category: 'accessories', description: 'Statement metal accessory for interior spaces — Hyderabad' },
-    { id: 16, image: acc2, title: 'Premium Metal Accent', category: 'accessories', description: 'Premium metal accent piece — Bangalore' },
-    { id: 17, image: acc5, title: 'Statement Metal Piece', category: 'accessories', description: 'Bespoke statement metalwork piece — Mumbai' },
-    { id: 18, image: proj1, title: 'Residential Villa Gate', category: 'installations', description: 'Complete gate installation for a luxury villa — Hyderabad' },
-    { id: 19, image: proj2, title: 'Heritage Bungalow Entry', category: 'installations', description: 'Heritage-style entry work for a classic bungalow — Bangalore' },
-    { id: 20, image: proj3, title: 'Estate Installation', category: 'installations', description: 'Full estate metalwork installation — Chennai' },
-    { id: 21, image: proj4, title: 'Corporate Feature Work', category: 'installations', description: 'Metal feature work for a corporate campus — Mumbai' },
-    { id: 22, image: proj5, title: 'Premium Residence', category: 'installations', description: 'End-to-end metalwork for a premium residence — Hyderabad' },
-    { id: 23, image: proj6, title: 'Luxury Apartment', category: 'installations', description: 'Custom metalwork for a luxury high-rise apartment — Pune' },
-    { id: 24, image: proj7, title: 'Commercial Installation', category: 'installations', description: 'Commercial space metal installation — Delhi' },
-    { id: 25, image: proj8, title: 'Site Metalwork', category: 'installations', description: 'On-site premium metalwork project — Vizag' },
-    { id: 26, image: proj9, title: 'Bespoke Project', category: 'installations', description: 'Fully bespoke metal fabrication — Kolkata' },
-    { id: 27, image: proj10, title: 'Landmark Installation', category: 'installations', description: 'Landmark metalwork piece for a prestigious client' },
-    { id: 28, image: proj11, title: 'Signature Work', category: 'installations', description: 'Signature project completed with master craftsmen' },
-    { id: 29, image: proj12, title: 'Architectural Metal Feature', category: 'installations', description: 'Architectural metal feature for a boutique hotel' },
+    { id: 1, image: gate1, title: 'Floral Corner Main Door', category: 'Entrance', description: 'Elegant main door with floral metal accents.' },
+    { id: 2, image: gate2, title: 'Geometric Heritage Door', category: 'Entrance', description: 'Traditional entrance with geometric metal detailing.' },
+    { id: 3, image: gate3, title: 'Classic Panel Entrance', category: 'Entrance', description: 'Premium wooden entrance with decorative panels.' },
+
+    { id: 4, image: railing1, title: 'Twisted Metal Baluster', category: 'railings', description: 'Elegant handcrafted baluster with twisted detailing.' },
+    { id: 5, image: railing3, title: 'Floral Door Railing Accent', category: 'railings', description: 'Decorative floral railing with timeless elegance.' },
+    { id: 6, image: railing4, title: 'Classic Pillar Baluster', category: 'railings', description: 'Premium pillar baluster with refined craftsmanship.' },   
+
+    { id: 7, image: mural1, title: 'Nature Inspired Wall Mural', category: 'murals', description: 'Hand-crafted metal mural with nature motifs ' },
+    { id: 8, image: mural2, title: 'Heritage Metal Artwork', category: 'murals', description: 'Intricate heritage artwork panel ' },
+    { id: 9, image: mural3, title: 'Lord Ganesha Metal Wall Mural', category: 'murals', description: 'Intricate handcrafted Ganesha artwork.' },
+
+    { id: 10, image: nameboard1, title: 'Luxury Villa Name Board', category: 'Name Board', description: 'Elegant handcrafted villa name plaque. ' },
+    { id: 11, image: nameboard2, title: 'Decorative Entrance Name Board', category: 'Name Board', description: 'Custom metal name board for grand entrances. ' },
+    { id: 12, image: nameboard3, title: 'Custom Logo Name Board', category: 'Name Board', description: 'Premium metal logo signage with a modern finish. ' },
+
+    { id: 13, image: poojaroom1, title: 'Classic Pooja Room Entrance', category: 'Pooja Room', description: 'Elegant handcrafted pooja room entrance doors.' },
+    { id: 14, image: poojaroom2, title: 'Heritage Pooja Room Doors', category: 'Pooja Room', description: 'Traditional metal doors with timeless craftsmanship.' },
+    { id: 15, image: poojaroom3, title: 'Divine Pooja Room Shrine', category: 'Pooja Room', description: 'Sacred pooja room with elegant metal detailing.' },
+
+    { id: 16, image: Mantapam1, title: 'Royal Pooja Mantapam', category: 'Mantapam 3D Designs', description: 'Grand handcrafted pooja mantapam design.' },
+    { id: 17, image: Mantapam2, title: 'Traditional Temple Mantapam', category: 'Mantapam 3D Designs', description: 'Elegant temple-style pooja enclosure.' },
+    { id: 18, image: Mantapam3, title: 'Sacred Mandir Showcase', category: 'Mantapam 3D Designs', description: 'Premium pooja shrine with glass enclosure.' },
+
+    { id: 19, image: PHandles1, title: 'Lakshmi Designer Pull Handle', category: 'Pull Handles', description: 'Divine pull handle with Lakshmi detailing.' },
+    { id: 20, image: PHandles2, title: 'Heritage Scroll Pull Handle', category: 'Pull Handles', description: 'Elegant scrollwork pull handle design.' },
+    { id: 21, image: PHandles3, title: 'Mandala Designer Pull Handle', category: 'Pull Handles', description: 'Premium circular mandala pull handle.' },
+
+    { id: 22, image: Vaskals1, title: 'Royal Floral Vaskal', category: 'Vaskal Designs', description: 'Elegant floral threshold with heritage detailing.' },
+    { id: 23, image: Vaskals2, title: 'Heritage Scroll Vaskale', category: 'Vaskal Designs', description: 'Traditional scrollwork border with premium finish' },
+    { id: 24, image: Vaskals3, title: 'Classic Floral Vaskal', category: 'Vaskal Designs', description: 'Decorative floral border for grand entrances.' },
+
+    { id: 25, image: Partition1, title: 'Geometric Partition Grill', category: 'Partition Grills', description: 'Elegant partition with geometric metal patterns.' },
+    { id: 26, image: Partition2, title: 'Heritage Border Partition', category: 'Partition Grills', description: 'Decorative partition with handcrafted metal borders.' },
+    { id: 27, image: Partition3, title: 'Modern Glass Partition', category: 'Partition Grills', description: 'Contemporary glass partition with metal accents.' },
+
+    { id: 28, image: GateD1, title: 'Lotus Entrance Gate', category: 'Gate Designs', description: 'Elegant entrance gate with lotus metal motifs.' },
+    { id: 29, image: GateD2, title: 'Royal Heritage Gate', category: 'Gate Designs', description: 'Grand heritage gate with handcrafted detailing.' },
+    { id: 30, image: GateD3, title: 'Contemporary Sliding Gate', category: 'Gate Designs', description: 'Modern sliding gate with premium metalwork.' },
+
+    { id: 31, image: accc1, title: 'Heritage Scroll Medallion', category: 'Accessories', description: 'Elegant scrollwork decorative wall accessory.' },
+    { id: 32, image: accc2, title: 'Lotus Metal Emblem', category: 'Accessories', description: 'Handcrafted lotus motif for premium interiors.' },
+    { id: 33, image: accc3, title: 'Sacred Lotus Rosette', category: 'Accessories', description: 'Decorative lotus rosette with timeless craftsmanship.' },
+    { id: 34, image: accc4, title: 'Radha Krishna Plaque', category: 'Accessories', description: 'Divine handcrafted Radha Krishna wall ornament.' },
+    { id: 35, image: accc5, title: 'Floral Mandala Medallion', category: 'Accessories', description: 'Intricate floral medallion with heritage detailing.' },
+    { id: 36, image: accc6, title: 'Lotus Wall Ornament', category: 'Accessories', description: 'Artistic lotus décor for elegant spaces.' },
+
   ];
 
   const filteredProjects = activeCategory === 'all'
