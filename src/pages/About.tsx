@@ -2,10 +2,7 @@ import { Target, Users, Lightbulb, Hammer } from 'lucide-react';
 <link rel="icon" type="image/png" href="/logo.png" />
 import heroImg from '../assets/images/gates/gate9.jpg';
 import storyImg from '../assets/images/gates/gate10.jpg';
-import craft1 from '../assets/images/MD 3 Template/MD 2 Template.jpg';
-import craft2 from '../assets/images/Partition Grills 3 Template/Partition Grills 2 Template.jpg';
-import about1 from '../assets/images/miror 3 Template/miror 2 Template.jpg';
-import about2 from '../assets/images/Vaskal 3 Template/Vaskal 2 Template.jpg';
+
 
 import { useSEO } from '../hooks/useSEO';
 
