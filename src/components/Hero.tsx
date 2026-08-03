@@ -3,7 +3,6 @@ import {
    ArrowRight,
   ChevronDown,
   Play,
-  Phone,
   MessageCircle,
   CalendarDays,
   FileText,
@@ -60,7 +59,7 @@ export default function Hero({ onNavigate }: HeroProps) {
   {
     title: "Chat on WhatsApp",
     icon: MessageCircle,
-    action: () => window.open("https://wa.me/919999999999", "_blank"),
+    action: () => window.open("https://wa.me/919741002354", "_blank"),
   },
   
   {
