@@ -41,12 +41,6 @@ export default function About({ onNavigate }: AboutProps) {
     },
   ];
 
-  const expertise = [
-    { number: '6+', label: 'Years Experience' },
-    { number: '100%', label: 'Custom Fabrication' },
-    { number: '15', label: 'Master Craftsmen' },
-    { number: '100%', label: 'Client Satisfaction' },
-  ];
 
   return (
     <div className="min-h-screen">
@@ -74,7 +68,7 @@ export default function About({ onNavigate }: AboutProps) {
 
       <section className="py-12 md:py-24 bg-[#F5F6F7]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-8 items-center">
             <div>
               <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1E2A38] mb-6">
                 Our Story
@@ -138,53 +132,130 @@ export default function About({ onNavigate }: AboutProps) {
         </div>
       </section>
 
-      <section className="py-12 md:py-24 bg-[#ECEDEF]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="grid grid-cols-2 gap-6">
-                <img
-                  src={craft1}
-                  alt="Craftsmanship 1"
-                  className="w-full h-72 object-cover shadow-lg"
-                />
-                <img
-                  src={craft2}
-                  alt="Craftsmanship 2"
-                  className="w-full h-72 object-cover shadow-lg mt-8"
-                />
+<section className="py-20 bg-[#ECEDEF]">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+      {/* Left Side */}
+      <div>
+
+        <div className="bg-white rounded-lg shadow-xl border border-gray-200 p-10">
+
+          <p className="text-[#C9A45C] uppercase tracking-[0.3em] text-sm font-semibold mb-3">
+            WHY CHOOSE US
+          </p>
+
+          <h2 className="text-4xl font-serif font-bold text-[#1E2A38] mb-10">
+            Why Choose
+            <br />
+            <span className="text-[#C9A45C]">
+              Shaping Metals?
+            </span>
+          </h2>
+
+          <div className="space-y-6">
+
+            {[
+              {
+                icon: Target,
+                title: "Premium Quality Materials",
+              },
+              {
+                icon: Lightbulb,
+                title: "100% Customization",
+              },
+              {
+                icon: Users,
+                title: "Modern Technology & Skilled Team",
+              },
+              {
+                icon: Hammer,
+                title: "Timely Delivery & Installation",
+              },
+              {
+                icon: Target,
+                title: "Affordable Pricing",
+              },
+              {
+                icon: Users,
+                title: "Trusted by Thousands",
+              },
+            ].map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={index}
+                  className="flex items-center gap-5 pb-5 border-b border-gray-200 last:border-none"
+                >
+                  <div className="w-12 h-12 rounded-full border-2 border-[#C9A45C] flex items-center justify-center flex-shrink-0">
+                    <Icon
+                      className="text-[#C9A45C]"
+                      size={22}
+                    />
+                  </div>
+
+                  <span className="text-lg font-medium text-[#1E2A38]">
+                    {item.title}
+                  </span>
+                </div>
+              );
+            })}
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* Right Side */}
+
+      <div>
+
+        <h2 className="text-5xl font-serif font-bold text-[#1E2A38] mb-8">
+          Expertise That Defines Excellence
+        </h2>
+
+        <p className="text-lg text-gray-600 leading-9 mb-8">
+          Our team brings together diverse specializations — from structural engineers to fine artists, welders to polishers — each contributing their mastery to create pieces that are both structurally sound and visually stunning.
+        </p>
+
+        <p className="text-lg text-gray-600 leading-9 mb-12">
+          We work with stainless steel, wrought iron, brass, copper and specialty alloys using CNC machinery and precision fabrication techniques to deliver exceptional craftsmanship.
+        </p>
+
+        {/* <div className="grid grid-cols-2 gap-6">
+
+          {expertise.map((item, index) => (
+
+            <div
+              key={index}
+              className="bg-white p-8 rounded-xl shadow-md"
+            >
+              <div className="text-5xl font-serif text-[#C9A45C] mb-3">
+                {item.number}
               </div>
+
+              <div className="uppercase tracking-widest text-sm text-gray-600">
+                {item.label}
+              </div>
+
             </div>
 
-            <div className="order-1 lg:order-2">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1E2A38] mb-6">
-                Expertise That Defines Excellence
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Our team brings together diverse specializations — from structural engineers to fine artists, welders to polishers — each contributing their mastery to create pieces that are both structurally sound and visually stunning.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                We work with a wide range of metals including stainless steel, wrought iron, brass, copper, and specialty alloys. Our state-of-the-art facility is equipped with precision CNC machinery, plasma cutters, and traditional forging equipment, giving us the versatility to execute any design.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                {expertise.map((item, index) => (
-                  <div key={index} className="bg-white p-6 shadow-lg">
-                    <div className="text-4xl font-serif font-bold text-[#C9A45C] mb-2">
-                      {item.number}
-                    </div>
-                    <div className="text-sm text-gray-600 uppercase tracking-wider">
-                      {item.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          ))}
+
+        </div> */}
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* Workshop Photo Feature */}
-      <section className="py-12 md:py-24 bg-white">
+      {/* <section className="py-12 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1E2A38] text-center mb-12">
             Mirror Frames
@@ -202,7 +273,7 @@ export default function About({ onNavigate }: AboutProps) {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-12 md:py-24 bg-[#1E2A38]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">

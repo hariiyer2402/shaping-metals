@@ -20,7 +20,7 @@ import proj2 from "../assets/images/projects/proj2.jpg";
 import proj3 from "../assets/images/projects/proj3.jpg";
 import proj4 from "../assets/images/projects/proj4.jpg";
 import proj5 from "../assets/images/projects/proj5.jpg";
-import aboutImg from "../assets/images/about/about1.jpg";
+import aboutImg from "../assets/images/about/about1.webp";
 
 import { useSEO } from "../hooks/useSEO";
 
@@ -226,37 +226,7 @@ return (
 </section>
 
 {/* CATALOG SECTION */}
-<section className="py-12 md:py-24 bg-white text-primary-navy">
-<div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-  <div>
-    <h2 className="text-3xl md:text-5xl font-serif mb-6">
-      Download Our Catalog
-    </h2>
-    <p className="text-gray-600 text-lg mb-8">
-      Explore our exclusive collection of bespoke metal designs. Request our comprehensive catalog to discover the perfect piece for your space.
-    </p>
-  </div>
-  <div className="bg-[#F5F6F7] p-8 rounded-xl shadow-lg border border-gray-100">
-    <form onSubmit={(e) => { e.preventDefault(); alert('Catalog requested successfully!'); }} className="space-y-4 text-left">
-      <div>
-        <label className="block text-sm font-medium mb-1 text-gray-700">Name *</label>
-        <input type="text" className="w-full px-4 py-3 border border-gray-300 focus:border-[#C9A45C] focus:ring-1 focus:ring-[#C9A45C] outline-none" placeholder="Your Name" required />
-      </div>
-      <div>
-        <label className="block text-sm font-medium mb-1 text-gray-700">Phone Number *</label>
-        <input type="tel" className="w-full px-4 py-3 border border-gray-300 focus:border-[#C9A45C] focus:ring-1 focus:ring-[#C9A45C] outline-none" placeholder="Your Phone Number" required />
-      </div>
-      <div>
-        <label className="block text-sm font-medium mb-1 text-gray-700">Area *</label>
-        <input type="text" className="w-full px-4 py-3 border border-gray-300 focus:border-[#C9A45C] focus:ring-1 focus:ring-[#C9A45C] outline-none" placeholder="Your Area / City" required />
-      </div>
-      <button type="submit" className="w-full bg-[#1E2A38] text-white py-4 mt-4 hover:bg-[#C9A45C] transition-colors uppercase tracking-widest text-sm font-semibold">
-        Request Catalog
-      </button>
-    </form>
-  </div>
-</div>
-</section>
+
 {/* -------------------------------------------------------------------------------------------------------------- */}
 {/* TESTIMONIALS */}
 <section className="py-20 md:py-28 bg-[#F5F6F7]">

@@ -1,10 +1,19 @@
 import { useState, useEffect } from "react";
-import { ArrowRight, ChevronDown, Play } from "lucide-react";
+import {
+   ArrowRight,
+  ChevronDown,
+  Play,
+  Phone,
+  MessageCircle,
+  CalendarDays,
+  FileText,
+  Download,
+} from "lucide-react";
 import craftsmanshipVideo from "../assets/hero_vid/Video Project.mp4";
 <link rel="icon" type="image/png" href="/logo.png" />
 
 import img1 from "../assets/images/gates/gate1.jpg";
-import img2 from "../assets/images/railings/railing4.jpg";
+import img2 from "../assets/images/main_door/img14.jpg";
 import img3 from "../assets/images/murals/mural2.jpg";
 
 import img4 from "../assets/images/accessories/acc1.jpg";
@@ -47,11 +56,42 @@ export default function Hero({ onNavigate }: HeroProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [playVideo, setPlayVideo] = useState(false);
 
+  const quickActions = [
+  {
+    title: "Chat on WhatsApp",
+    icon: MessageCircle,
+    action: () => window.open("https://wa.me/919999999999", "_blank"),
+  },
+  
+  {
+    title: "Book Site Visit",
+    icon: CalendarDays,
+    action: () => onNavigate("contact"),
+  },
+  {
+    title: "Get Quotation",
+    icon: FileText,
+    action: () => onNavigate("contact"),
+  },
+  {
+  title: "Download Catalogue",
+  icon: Download,
+  action: () => {
+    const link = document.createElement("a");
+    link.href = "/Presentation New.pdf";
+    link.download = "Shaping-Metals-Catalogue.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  },
+},
+];
+
   const heroSlides = [
     {
       image: img1,
       mobileImage: img1Mobile,
-      title: "Artistry in Metal",
+      title: "Specialist in Metals",
       subtitle: "Bespoke Creations",
       description: "Where timeless craftsmanship meets contemporary design",
     },
@@ -138,7 +178,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             <div className="overflow-hidden">
               <h1
                 key={current}
-                className="text-white font-serif text-4xl md:text-7xl lg:text-8xl xl:text-9xl font-normal leading-none tracking-tight animate-slide-up"
+                className="text-white font-serif text-4xl md:text-7xl lg:text-7xl xl:text-8xl font-normal leading-none tracking-tight animate-slide-up"
               >
                 {heroSlides[current].title.split(" ").map((word, i) => (
                   <span key={i} className="block">
@@ -236,13 +276,51 @@ export default function Hero({ onNavigate }: HeroProps) {
             className="animate-bounce group-hover:text-primary-gold"
           />
         </button>
-
+{/* ---------------------------------------------------------------------------------------------------------------------------------- */}
         {/* Side Text */}
-        <div className="absolute right-8 lg:right-16 top-1/2 -translate-y-1/2 z-20 hidden lg:block">
-          <p className="text-white/40 text-xs uppercase tracking-[0.4em] font-sans rotate-90 origin-center whitespace-nowrap">
-            Shaping Metals Since 2020
-          </p>
-        </div>
+{/* Floating Quick Actions */}
+<div className="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2 z-30">
+  <div className="w-72 bg-[#08131f]/95 backdrop-blur-md border border-white/10 rounded-l-2xl shadow-2xl overflow-hidden">
+
+    {quickActions.map((item, index) => {
+      const Icon = item.icon;
+
+      return (
+        <button
+          key={index}
+          onClick={item.action}
+          className={`group w-full flex items-center justify-between px-6 py-6 hover:bg-primary-gold/10 transition-all duration-300 ${
+            index !== quickActions.length - 1
+              ? "border-b border-white/10"
+              : ""
+          }`}
+        >
+          <div className="flex items-center gap-4">
+
+            <div className="w-12 h-12 rounded-full border border-primary-gold flex items-center justify-center transition-all duration-300 group-hover:bg-primary-gold">
+              <Icon
+  size={20}
+  className="text-primary-gold group-hover:text-primary-navy transition-colors duration-300"
+/>
+            </div>
+
+            <span className="text-white text-left text-sm font-light">
+              {item.title}
+            </span>
+
+          </div>
+
+<ArrowRight
+  size={18}
+  className="text-white/60 group-hover:text-primary-gold group-hover:translate-x-1 transition-all duration-300"
+/>
+        </button>
+      );
+    })}
+
+  </div>
+</div>
+{/* -------------------------------------------------------------------------------------------------------------------------------- */}
 
         {/* Decorative Corner Elements */}
         <div className="absolute top-24 left-8 lg:left-16 w-16 h-16 border-l border-t border-white/10" />
