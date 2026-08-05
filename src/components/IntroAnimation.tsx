@@ -44,7 +44,18 @@ const typing = setTimeout(() => {
   return (
   <div className="fixed inset-0 z-[9999] bg-[#0B0B0B] flex items-center justify-center overflow-hidden">
     {/* Background Glow */}
-    <div className="absolute w-[700px] h-[700px] rounded-full bg-[#C9A45C]/10 blur-3xl" />
+    <div className="
+    absolute
+    w-[500px]
+    h-[500px]
+    sm:w-[450px]
+    sm:h-[450px]
+    md:w-[650px]
+    md:h-[650px]
+    rounded-full
+    bg-[#C9A45C]/10
+    blur-3xl
+  " />
 
           <div
         className={`
@@ -58,17 +69,44 @@ const typing = setTimeout(() => {
         `}
       >
       {/* Logo */}
-      <img
-        src={logo}
-        alt="Shaping Metals"
-        className="object-contain h-64 md:h-96 lg:h-[28rem]"
-      />
+<img
+  src={logo}
+  alt="Shaping Metals"
+  className="
+    object-contain
+    w-56
+    sm:w-60
+    md:w-72
+    lg:w-[420px]
+    xl:w-[460px]
+    mx-auto
+  "
+/>
 
       {/* Company Name + Subtitle */}
-      <div className="-mt-12 md:-mt-16 w-full flex flex-col items-center">
+<div
+  className="
+    w-full
+    flex
+    flex-col
+    items-center
+    justify-center
+    -mt-6
+    md:-mt-12
+  "
+>
         {/* Company Name */}
         <h1
-          className="text-5xl md:text-7xl font-semibold tracking-wide"
+className="
+text-center
+font-semibold
+leading-tight
+tracking-wide
+text-[2.5rem]
+sm:text-[3rem]
+md:text-6xl
+lg:text-7xl
+"
           style={{
             fontFamily: "Cinzel, serif",
             background: "linear-gradient(180deg, #E5D6AC 0%, #A48B41 100%)",
@@ -81,9 +119,25 @@ const typing = setTimeout(() => {
         </h1>
 
         {/* Subtitle */}
-        <div className="w-full max-w-[900px] flex justify-end mt-2">
-          <p
-            className="text-lg md:text-2xl"
+<div
+  className="
+    w-full
+    flex
+    justify-end
+    mt-1
+    pr-6
+    md:pr-0
+  "
+>
+  <p
+className="
+text-sm
+sm:text-lg
+md:text-xl
+lg:text-2xl
+tracking-wider
+whitespace-nowrap
+    "
             style={{
               fontFamily: "Cinzel, serif",
               letterSpacing: "0.08em",

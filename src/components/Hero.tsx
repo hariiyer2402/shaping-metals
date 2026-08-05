@@ -278,9 +278,9 @@ export default function Hero({ onNavigate }: HeroProps) {
 {/* ---------------------------------------------------------------------------------------------------------------------------------- */}
         {/* Side Text */}
 {/* Floating Quick Actions */}
-<div className="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2 z-30">
+{/* ================= DESKTOP ================= */}
+<div className="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2 z-50">
   <div className="w-72 bg-[#08131f]/95 backdrop-blur-md border border-white/10 rounded-l-2xl shadow-2xl overflow-hidden">
-
     {quickActions.map((item, index) => {
       const Icon = item.icon;
 
@@ -295,29 +295,79 @@ export default function Hero({ onNavigate }: HeroProps) {
           }`}
         >
           <div className="flex items-center gap-4">
-
-            <div className="w-12 h-12 rounded-full border border-primary-gold flex items-center justify-center transition-all duration-300 group-hover:bg-primary-gold">
+            <div className="w-12 h-12 rounded-full border border-primary-gold flex items-center justify-center group-hover:bg-primary-gold transition-all duration-300">
               <Icon
-  size={20}
-  className="text-primary-gold group-hover:text-primary-navy transition-colors duration-300"
-/>
+                size={20}
+                className="text-primary-gold group-hover:text-primary-navy"
+              />
             </div>
 
-            <span className="text-white text-left text-sm font-light">
+            <span className="text-white text-sm font-light">
               {item.title}
             </span>
-
           </div>
 
-<ArrowRight
-  size={18}
-  className="text-white/60 group-hover:text-primary-gold group-hover:translate-x-1 transition-all duration-300"
-/>
+          <ArrowRight
+            size={18}
+            className="text-white/60 group-hover:text-primary-gold group-hover:translate-x-1 transition-all duration-300"
+          />
         </button>
       );
     })}
-
   </div>
+</div>
+
+{/* ================= MOBILE ================= */}
+
+<div className="    xl:hidden
+    xl:hidden
+    absolute
+    bottom-24
+    left-1/2
+    -translate-x-1/2
+    z-30
+    flex
+    flex-row
+    gap-3
+  ">
+
+  {quickActions.map((item, index) => {
+
+    const Icon = item.icon;
+
+    return (
+
+      <button
+        key={index}
+        onClick={item.action}
+        className="
+w-12
+h-12
+        rounded-full
+        bg-[#08131f]/95
+        border
+        border-primary-gold
+        flex
+        items-center
+        justify-center
+        shadow-xl
+        hover:bg-primary-gold
+        transition-all
+        duration-300
+        "
+      >
+
+        <Icon
+          size={22}
+          className="text-primary-gold hover:text-primary-navy"
+        />
+
+      </button>
+
+    );
+
+  })}
+
 </div>
 {/* -------------------------------------------------------------------------------------------------------------------------------- */}
 
@@ -594,7 +644,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           </div>
         </div>
       </section>
-
+                    
       <style>{`
         @keyframes slideUp {
           from {

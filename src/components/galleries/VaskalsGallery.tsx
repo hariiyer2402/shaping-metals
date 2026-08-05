@@ -1,7 +1,7 @@
-import vaskal1 from '../../assets/images/Vaskal/vaskal 01.jpg';
-import vaskal2 from '../../assets/images/Vaskal/vaskal 02.jpg';
-import vaskal3 from '../../assets/images/Vaskal/vaskal 03.jpg';
-import vaskal4 from '../../assets/images/Vaskal/vaskal 04.jpg';
+import vaskal1 from '../../assets/images/Vaskal/Vaskal 01.webp';
+import vaskal2 from '../../assets/images/Vaskal/Vaskal 02.webp';
+import vaskal3 from '../../assets/images/Vaskal/Vaskal 03.webp';
+import vaskal4 from '../../assets/images/Vaskal/Vaskal 04.webp';
 
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
