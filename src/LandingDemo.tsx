@@ -1,6 +1,6 @@
 import img1 from "./assets/images/gates/gate1.jpg";
 import img2 from "./assets/images/gates/gate4.jpg";
-import img3 from "./assets/images/murals/mural1.jpg";
+import img3 from "./assets/images/murals/mural1.webp";
 import { useSEO } from "./hooks/useSEO";
 
 export default function LandingDemo({ onNavigate }: any) {

@@ -1,9 +1,9 @@
-import room1 from '../../assets/images/Room Door/Room 01.jpg';
-import room2 from '../../assets/images/Room Door/Room 02.jpg';
-import room3 from '../../assets/images/Room Door/Room 03.jpg';
-import room4 from '../../assets/images/Room Door/Room 04.jpg';
-import room5 from '../../assets/images/Room Door/Room 05.jpg';
-import room6 from '../../assets/images/Room Door/Room 06.jpg';
+import room1 from '../../assets/images/Room Door/Room 01.webp';
+import room2 from '../../assets/images/Room Door/Room 02.webp';
+import room3 from '../../assets/images/Room Door/Room 03.webp';
+import room4 from '../../assets/images/Room Door/Room 04.webp';
+import room5 from '../../assets/images/Room Door/Room 05.webp';
+import room6 from '../../assets/images/Room Door/Room 06.webp';
 
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -13,37 +13,31 @@ const projects = [
     id: 1,
     image: room1,
     title: 'Premium Room Door',
-    description: 'Elegant handcrafted room door with premium finish.',
   },
   {
     id: 2,
     image: room2,
     title: 'Designer Wooden Door',
-    description: 'Modern wooden room door with decorative detailing.',
   },
   {
     id: 3,
     image: room3,
     title: 'Luxury Interior Door',
-    description: 'Premium interior door with elegant craftsmanship.',
   },
   {
     id: 4,
     image: room4,
     title: 'Contemporary Room Door',
-    description: 'Stylish room door designed for modern interiors.',
   },
   {
     id: 5,
     image: room5,
     title: 'Classic Wooden Door',
-    description: 'Traditional handcrafted wooden room door.',
   },
   {
     id: 6,
     image: room6,
     title: 'Designer Bedroom Door',
-    description: 'Beautiful bedroom door with premium wood finish.',
   },
 ];
 
@@ -94,7 +88,7 @@ export default function RoomDoorsGallery() {
               </h3>
 
               <p className="text-gray-600 text-sm">
-                {project.description}
+                {/* {project.description} */}
               </p>
             </div>
           </div>
@@ -130,7 +124,7 @@ export default function RoomDoorsGallery() {
               </h3>
 
               <p className="text-gray-300 mt-2">
-                {projects[lightboxIndex].description}
+                {/* {projects[lightboxIndex].description} */}
               </p>
             </div>
           </div>

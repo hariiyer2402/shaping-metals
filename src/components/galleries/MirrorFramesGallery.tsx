@@ -1,8 +1,8 @@
-import mirror1 from '../../assets/images/Miror/miror 01.jpg';
-import mirror2 from '../../assets/images/Miror/miror 02.jpg';
-import mirror3 from '../../assets/images/Miror/miror 03.jpg';
-import mirror4 from '../../assets/images/Miror/miror 04.jpg';
-import mirror5 from '../../assets/images/Miror/miror 05.jpg';
+import mirror1 from '../../assets/images/Miror/miror 01.webp';
+import mirror2 from '../../assets/images/Miror/miror 02.webp';
+import mirror3 from '../../assets/images/Miror/miror 03.webp';
+import mirror4 from '../../assets/images/Miror/miror 04.webp';
+import mirror5 from '../../assets/images/Miror/miror 05.webp';
 
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -12,31 +12,26 @@ const projects = [
     id: 1,
     image: mirror1,
     title: 'Luxury Mirror Frame',
-    description: 'Elegant handcrafted metal mirror frame with premium finish.',
   },
   {
     id: 2,
     image: mirror2,
     title: 'Designer Wall Mirror',
-    description: 'Modern decorative mirror frame for stylish interiors.',
   },
   {
     id: 3,
     image: mirror3,
     title: 'Classic Decorative Frame',
-    description: 'Timeless handcrafted mirror frame with intricate detailing.',
   },  
   {
     id: 3,
     image: mirror4,
-    title: 'Classic Decorative Frame',
-    description: 'Timeless handcrafted mirror frame with intricate detailing.',
+    title: 'Modern Infinity Mirror Frame',
   },
   {
     id: 3,
     image: mirror5,
-    title: 'Classic Decorative Frame',
-    description: 'Timeless handcrafted mirror frame with intricate detailing.',
+    title: 'Royal Floral Mirror Frame',
   },
 ];
 
@@ -87,7 +82,7 @@ export default function MirrorFramesGallery() {
               </h3>
 
               <p className="text-gray-600 text-sm">
-                {project.description}
+                {/* {project.description} */}
               </p>
             </div>
           </div>
@@ -123,7 +118,7 @@ export default function MirrorFramesGallery() {
               </h3>
 
               <p className="text-gray-300 mt-2">
-                {projects[lightboxIndex].description}
+                {/* {projects[lightboxIndex].description} */}
               </p>
             </div>
           </div>

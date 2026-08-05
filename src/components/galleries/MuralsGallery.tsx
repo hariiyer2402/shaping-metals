@@ -1,9 +1,9 @@
-import mural1 from '../../assets/images/murals/mural1.jpg';
-import mural2 from '../../assets/images/murals/mural2.jpg';
-import mural3 from '../../assets/images/murals/mural3.jpg';
-import mural4 from '../../assets/images/murals/mural8.jpg';
-import mural5 from '../../assets/images/murals/mural9.jpg';
-import mural6 from '../../assets/images/murals/mural10.jpg';
+import mural1 from '../../assets/images/murals/mural1.webp';
+import mural2 from '../../assets/images/murals/mural2.webp';
+import mural3 from '../../assets/images/murals/mural3.webp';
+import mural4 from '../../assets/images/murals/mural8.webp';
+import mural5 from '../../assets/images/murals/mural9.webp';
+import mural6 from '../../assets/images/murals/mural10.webp';
 
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -13,37 +13,33 @@ const projects = [
     id: 1,
     image: mural1,
     title: "Decorative Metal Mural",
-    description: "Elegant handcrafted metal mural for modern interiors.",
+
   },
   {
     id: 2,
     image: mural2,
     title: "Luxury Wall Art",
-    description: "Premium laser-cut wall mural with contemporary design.",
   },
   {
     id: 3,
     image: mural3,
     title: "Designer Metal Artwork",
-    description: "Beautiful decorative mural crafted with precision.",
   },
   {
     id: 4,
     image: mural4,
-    title: "Premium Wall Mural",
-    description: "Custom metal mural adding elegance to any space.",
+    title: "Divine Tree of Life Mural",
   },
     {
     id: 5,
     image: mural5,
-    title: "Premium Wall Mural",
-    description: "Custom metal mural adding elegance to any space.",
+    title: "Bodhi Serenity Mural",
+
   },
     {
     id: 6,
     image: mural6,
-    title: "Premium Wall Mural",
-    description: "Custom metal mural adding elegance to any space.",
+    title: "Royal Peacock Branch Mural",
   },
 ];
 
@@ -94,7 +90,7 @@ export default function MuralsGallery() {
               </h3>
 
               <p className="text-gray-600 text-sm">
-                {project.description}
+                {/* {project.description} */}
               </p>
             </div>
           </div>
@@ -130,7 +126,7 @@ export default function MuralsGallery() {
               </h3>
 
               <p className="text-gray-300 mt-2">
-                {projects[lightboxIndex].description}
+                {/* {projects[lightboxIndex].description} */}
               </p>
             </div>
           </div>

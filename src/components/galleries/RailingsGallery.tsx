@@ -1,7 +1,7 @@
-import railing1 from '../../assets/images/railings/Railings 01.jpg';
-import railing2 from '../../assets/images/railings/Railings 02.jpg';
-import railing3 from '../../assets/images/railings/Railings 03.jpg';
-import railing4 from '../../assets/images/railings/Railings 04.jpg';
+import railing1 from '../../assets/images/railings/Railings 01.webp';
+import railing2 from '../../assets/images/railings/Railings 02.webp';
+import railing3 from '../../assets/images/railings/Railings 03.webp';
+import railing4 from '../../assets/images/railings/Railings 04.webp';
 
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -11,25 +11,21 @@ const projects = [
     id: 1,
     image: railing1,
     title: 'Twisted Metal Baluster',
-    description: 'Elegant handcrafted baluster with twisted detailing.',
   },
   {
     id: 2,
     image: railing2,
     title: 'Floral Door Railing Accent',
-    description: 'Decorative floral railing with timeless elegance.',
   },
   {
     id: 3,
     image: railing3,
     title: 'Classic Pillar Baluster',
-    description: 'Premium pillar baluster with refined craftsmanship.',
   },
     {
     id: 4,
     image: railing4,
-    title: 'Classic Pillar Baluster',
-    description: 'Premium pillar baluster with refined craftsmanship.',
+    title: 'Royal Scroll Railing',
   },
 ];
 
@@ -80,7 +76,7 @@ export default function RailingsGallery() {
               </h3>
 
               <p className="text-gray-600 text-sm">
-                {project.description}
+                {/* {project.description} */}
               </p>
             </div>
           </div>
@@ -116,7 +112,7 @@ export default function RailingsGallery() {
               </h3>
 
               <p className="text-gray-300 mt-2">
-                {projects[lightboxIndex].description}
+                {/* {projects[lightboxIndex].description} */}
               </p>
             </div>
           </div>

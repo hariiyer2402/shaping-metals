@@ -1,9 +1,9 @@
-import poojaroom1 from '../../assets/images/poojaroom/03.jpg';
-import poojaroom2 from '../../assets/images/poojaroom/06.jpg';
-import poojaroom3 from '../../assets/images/poojaroom/07.jpg';
-import poojaroom4 from '../../assets/images/poojaroom/08.jpg';
-import poojaroom5 from '../../assets/images/poojaroom/09.jpg';
-import poojaroom6 from '../../assets/images/poojaroom/02.jpg';
+import poojaroom1 from '../../assets/images/poojaroom/02.webp';
+import poojaroom2 from '../../assets/images/poojaroom/03.webp';
+import poojaroom3 from '../../assets/images/poojaroom/06.webp';
+import poojaroom4 from '../../assets/images/poojaroom/07.webp';
+import poojaroom5 from '../../assets/images/poojaroom/08.webp';
+import poojaroom6 from '../../assets/images/poojaroom/09.webp';
 
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -13,43 +13,35 @@ const projects = [
     id: 1,
     image: poojaroom1,
     title: 'Ornate Brass Designer Pooja Door',
-    description:
-      'Premium teak wood pooja entrance with handcrafted brass floral panels.',
   },
   {
     id: 2,
     image: poojaroom2,
     title: 'Traditional Brass Inlay Pooja Door',
-    description:
-      'Elegant pooja room entrance featuring Om, Swastik and decorative brass inlays.',
+
   },
   {
     id: 3,
     image: poojaroom3,
     title: 'Temple Style Pooja Room Entrance',
-    description:
-      'Classic temple-inspired pooja entrance with bells, brass accents and wooden craftsmanship.',
+
   },
   {
     id: 4,
     image: poojaroom4,
     title: 'Classic Pooja Room Entrance',
-    description:
-      'Elegant handcrafted pooja room entrance doors.',
+
   },
   {
     id: 5,
     image: poojaroom5,
     title: 'Heritage Pooja Room Doors',
-    description:
-      'Traditional metal doors with timeless craftsmanship.',
+
   },
   {
     id: 6,
     image: poojaroom6,
     title: 'Divine Pooja Room Shrine',
-    description:
-      'Sacred pooja room with elegant metal detailing.',
   },
 ];
 
@@ -100,7 +92,7 @@ export default function PoojaRoomGallery() {
               </h3>
 
               <p className="text-gray-600 text-sm">
-                {project.description}
+                {/* {project.description} */}
               </p>
             </div>
           </div>
@@ -136,7 +128,7 @@ export default function PoojaRoomGallery() {
               </h3>
 
               <p className="text-gray-300 mt-2">
-                {projects[lightboxIndex].description}
+                {/* {projects[lightboxIndex].description} */}
               </p>
             </div>
           </div>

@@ -1,9 +1,9 @@
-import partition1 from '../../assets/images/Partition Grills/Partition Grills 01.jpg';
-import partition2 from '../../assets/images/Partition Grills/Partition Grills 02.jpg';
-import partition3 from '../../assets/images/Partition Grills/Partition Grills 03.jpg';
-import partition4 from '../../assets/images/Partition Grills/Partition Grills 04.jpg';
-import partition5 from '../../assets/images/Partition Grills/Partition Grills 05.jpg';
-import partition6 from '../../assets/images/Partition Grills/Partition Grills 06.jpg';
+import partition1 from '../../assets/images/Partition Grills/Partition Grills 01.webp';
+import partition2 from '../../assets/images/Partition Grills/Partition Grills 02.webp';
+import partition3 from '../../assets/images/Partition Grills/Partition Grills 03.webp';
+import partition4 from '../../assets/images/Partition Grills/Partition Grills 04.webp';
+import partition5 from '../../assets/images/Partition Grills/Partition Grills 05.webp';
+import partition6 from '../../assets/images/Partition Grills/Partition Grills 06.webp';
 
 
 import { useState } from "react";
@@ -14,37 +14,37 @@ const projects = [
     id: 1,
     image: partition1,
     title: "Geometric Partition Grill",
-    description: "Elegant partition with geometric metal patterns.",
+
   },
   {
     id: 2,
     image: partition2,
     title: "Heritage Border Partition",
-    description: "Decorative partition with handcrafted metal borders.",
+
   },
   {
     id: 3,
     image: partition3,
-    title: "Modern Glass Partition",
-    description: "Contemporary glass partition with metal accents.",
+    title: "Hexa Fusion Partition Grill",
+
   },
   {
     id: 4,
     image: partition4,
-    title: "Modern Glass Partition",
-    description: "Contemporary glass partition with metal accents.",
+    title: "Divine Ganesha Partition Panel",
+
   },
   {
     id: 5,
     image: partition5,
-    title: "Modern Glass Partition",
-    description: "Contemporary glass partition with metal accents.",
+    title: "Lotus Bloom Partition Grill",
+
   },
   {
     id: 6,
     image: partition6,
     title: "Modern Glass Partition",
-    description: "Contemporary glass partition with metal accents.",
+
   },
 
 ];
@@ -97,7 +97,7 @@ const openLightbox = (index: number) => {
               </h3>
 
               <p className="text-gray-600 text-sm">
-                {project.description}
+                {/* {project.description} */}
               </p>
             </div>
           </div>

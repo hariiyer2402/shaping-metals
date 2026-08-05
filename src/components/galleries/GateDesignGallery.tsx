@@ -1,6 +1,6 @@
-import gate1 from '../../assets/images/Gates/gate 01.jpg';
-import gate2 from '../../assets/images/Gates/gate 02.jpg';
-import gate3 from '../../assets/images/Gates/gate 03.jpg';
+import gate1 from '../../assets/images/Gates/gate 01.webp';
+import gate2 from '../../assets/images/Gates/gate 02.webp';
+import gate3 from '../../assets/images/Gates/gate 03.webp';
 
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -10,19 +10,16 @@ const projects = [
     id: 1,
     image: gate1,
     title: 'Lotus Entrance Gate',
-    description: 'Elegant entrance gate with lotus metal motifs.',
   },
   {
     id: 2,
     image: gate2,
     title: 'Royal Heritage Gate',
-    description: 'Grand heritage gate with handcrafted detailing.',
   },
   {
     id: 3,
     image: gate3,
     title: 'Contemporary Sliding Gate',
-    description: 'Modern sliding gate with premium metalwork.',
   },
 ];
 
@@ -73,7 +70,7 @@ export default function GateDesignGallery() {
               </h3>
 
               <p className="text-gray-600 text-sm">
-                {project.description}
+                {/* {project.description} */}
               </p>
             </div>
           </div>
@@ -109,7 +106,7 @@ export default function GateDesignGallery() {
               </h3>
 
               <p className="text-gray-300 mt-2">
-                {projects[lightboxIndex].description}
+                {/* {projects[lightboxIndex].description} */}
               </p>
             </div>
           </div>

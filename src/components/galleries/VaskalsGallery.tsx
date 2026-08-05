@@ -11,25 +11,25 @@ const projects = [
     id: 1,
     image: vaskal1,
     title: 'Royal Floral Vaskal',
-    description: 'Elegant floral threshold with heritage detailing.',
+
   },
   {
     id: 2,
     image: vaskal2,
     title: 'Heritage Scroll Vaskal',
-    description: 'Traditional scrollwork border with premium finish.',
+
   },
   {
     id: 3,
     image: vaskal3,
-    title: 'Classic Floral Vaskal',
-    description: 'Decorative floral border for grand entrances.',
+    title: 'Classic Lotus Vaskal',
+
   },
     {
     id: 4,
     image: vaskal4,
-    title: 'Classic Floral Vaskal',
-    description: 'Decorative floral border for grand entrances.',
+    title: 'Royal Lotus Border Vaskal',
+
   },
 ];
 
@@ -80,7 +80,7 @@ export default function VaskalsGallery() {
               </h3>
 
               <p className="text-gray-600 text-sm">
-                {project.description}
+                {/* {project.description} */}
               </p>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function VaskalsGallery() {
               </h3>
 
               <p className="text-gray-300 mt-2">
-                {projects[lightboxIndex].description}
+                {/* {projects[lightboxIndex].description} */}
               </p>
             </div>
           </div>

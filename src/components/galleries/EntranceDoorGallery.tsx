@@ -1,9 +1,9 @@
-import md1 from '../../assets/images/main_door/01.jpg';
-import md2 from '../../assets/images/main_door/02.jpg';
-import md3 from '../../assets/images/main_door/03.jpg';
-import md4 from '../../assets/images/main_door/04.jpg';
-import md5 from '../../assets/images/main_door/05.jpg';
-import md6 from '../../assets/images/main_door/07.jpg';
+import md1 from '../../assets/images/main_door/01.webp';
+import md2 from '../../assets/images/main_door/02.webp';
+import md3 from '../../assets/images/main_door/03.webp';
+import md4 from '../../assets/images/main_door/04.webp';
+import md5 from '../../assets/images/main_door/05.webp';
+import md6 from '../../assets/images/main_door/07.webp';
 
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -12,38 +12,38 @@ const projects = [
   {
     id: 1,
     image: md1,
-    title: 'Floral Corner Main Door',
-    description: 'Elegant main door with floral metal accents.',
+    title: 'Royal Mandala Entrance Door',
+    // description: 'Elegant main door with floral metal accents.',
   },
   {
     id: 2,
     image: md2,
-    title: 'Geometric Heritage Door',
-    description: 'Traditional entrance with geometric metal detailing.',
+    title: 'Geometric Heritage Entrance Door',
+    // description: 'Traditional entrance with geometric metal detailing.',
   },
   {
     id: 3,
     image: md3,
-    title: 'Classic Panel Entrance',
-    description: 'Premium wooden entrance with decorative panels.',
+    title: 'Regal Floral Panel Door',
+    // description: 'Premium wooden entrance with decorative panels.',
   },
   {
     id: 4,
     image: md4,
-    title: 'Floral Corner Main Door',
-    description: 'Elegant main door with floral metal accents.',
+    title: 'Ornate Medallion Entrance Door',
+    // description: 'Elegant main door with floral metal accents.',
   },
   {
     id: 5,
     image: md5,
-    title: 'Geometric Heritage Door',
-    description: 'Traditional entrance with geometric metal detailing.',
+    title: 'Victorian Scroll Entrance Door',
+    // description: 'Traditional entrance with geometric metal detailing.',
   },
   {
     id: 6,
     image: md6,
-    title: 'Classic Panel Entrance',
-    description: 'Premium wooden entrance with decorative panels.',
+    title: 'Royal Twin Panel Entrance Door',
+    // description: 'Premium wooden entrance with decorative panels.',
   },
 ];
 
@@ -94,7 +94,7 @@ export default function EntranceDoorGallery() {
               </h3>
 
               <p className="text-gray-600 text-sm">
-                {project.description}
+                {/* {project.description} */}
               </p>
             </div>
           </div>

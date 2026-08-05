@@ -1,8 +1,8 @@
-import nameboard1 from '../../assets/images/nameboard/name1.jpg';
-import nameboard2 from '../../assets/images/nameboard/name2.jpg';
-import nameboard3 from '../../assets/images/nameboard/name4.jpg';
-import nameboard4 from '../../assets/images/nameboard/name5.jpg';
-import nameboard5 from '../../assets/images/nameboard/name6.jpg';
+import nameboard1 from '../../assets/images/nameboard/name1.webp';
+import nameboard2 from '../../assets/images/nameboard/name2.webp';
+import nameboard3 from '../../assets/images/nameboard/name4.webp';
+import nameboard4 from '../../assets/images/nameboard/name5.webp';
+import nameboard5 from '../../assets/images/nameboard/name6.webp';
 
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -12,31 +12,26 @@ const projects = [
     id: 1,
     image: nameboard1,
     title: "Premium Name Board",
-    description: "Elegant handcrafted stainless steel name board.",
   },
   {
     id: 2,
     image: nameboard2,
     title: "Designer Name Plate",
-    description: "Modern customized name board with premium finish.",
   },
   {
     id: 3,
     image: nameboard3,
     title: "Luxury Name Board",
-    description: "Beautiful laser-cut name board for homes and villas.",
   },
   {
     id: 4,
     image: nameboard4,
-    title: "Decorative Name Plate",
-    description: "Premium decorative name board with elegant design.",
+    title: "Royal Floral Name Plate",
   },
     {
     id: 5,
     image: nameboard5,
-    title: "Decorative Name Plate",
-    description: "Premium decorative name board with elegant design.",
+    title: "Granite Engraved Name Plate",
   },
 ];
 
@@ -87,7 +82,7 @@ export default function NameBoardGallery() {
               </h3>
 
               <p className="text-gray-600 text-sm">
-                {project.description}
+                {/* {project.description} */}
               </p>
             </div>
           </div>
@@ -123,7 +118,7 @@ export default function NameBoardGallery() {
               </h3>
 
               <p className="text-gray-300 mt-2">
-                {projects[lightboxIndex].description}
+                {/* {projects[lightboxIndex].description} */}
               </p>
             </div>
           </div>

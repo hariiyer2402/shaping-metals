@@ -1,9 +1,9 @@
-import handle1 from '../../assets/images/Pull Handles/Handel 01.jpg';
-import handle2 from '../../assets/images/Pull Handles/Handel 05.jpg';
-import handle3 from '../../assets/images/Pull Handles/Handel 03.jpg';
-import handle4 from '../../assets/images/Pull Handles/Handel 06.jpg';
-import handle5 from '../../assets/images/Pull Handles/Handel 08.jpg';
-import handle6 from '../../assets/images/Pull Handles/Handel 09.jpg';
+import handle1 from '../../assets/images/Pull Handles/Handel 01.webp';
+import handle2 from '../../assets/images/Pull Handles/Handel 03.webp';
+import handle3 from '../../assets/images/Pull Handles/Handel 05.webp';
+import handle4 from '../../assets/images/Pull Handles/Handel 06.webp';
+import handle5 from '../../assets/images/Pull Handles/Handel 08.webp';
+import handle6 from '../../assets/images/Pull Handles/Handel 09.webp';
 
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -13,37 +13,31 @@ const projects = [
     id: 1,
     image: handle1,
     title: 'Lakshmi Designer Pull Handle',
-    description: 'Divine pull handle with Lakshmi detailing.',
   },
   {
     id: 2,
     image: handle2,
     title: 'Heritage Scroll Pull Handle',
-    description: 'Elegant scrollwork pull handle design.',
   },
   {
     id: 3,
     image: handle3,
-    title: 'Mandala Designer Pull Handle',
-    description: 'Premium circular mandala pull handle.',
+    title: 'Royal Lotus Pull Handle',
   },
     {
     id: 4,
     image: handle4,
-    title: 'Mandala Designer Pull Handle',
-    description: 'Premium circular mandala pull handle.',
+    title: 'Blooming Lotus Twin Pull Handle',
   },
     {
     id: 5,
     image: handle5,
-    title: 'Mandala Designer Pull Handle',
-    description: 'Premium circular mandala pull handle.',
+    title: 'Victorian Heritage Pull Handle',
   },
     {
     id: 6,
     image: handle6,
-    title: 'Mandala Designer Pull Handle',
-    description: 'Premium circular mandala pull handle.',
+    title: 'Regal Column Pull Handle',
   },
 ];
 
@@ -94,7 +88,7 @@ export default function HandlesGallery() {
               </h3>
 
               <p className="text-gray-600 text-sm">
-                {project.description}
+                {/* {project.description} */}
               </p>
             </div>
           </div>
@@ -130,7 +124,7 @@ export default function HandlesGallery() {
               </h3>
 
               <p className="text-gray-300 mt-2">
-                {projects[lightboxIndex].description}
+                {/* {projects[lightboxIndex].description} */}
               </p>
             </div>
           </div>

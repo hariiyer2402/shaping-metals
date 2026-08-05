@@ -13,7 +13,7 @@ import craftsmanshipVideo from "../assets/hero_vid/Video Project.mp4";
 
 import img1 from "../assets/images/gates/gate1.jpg";
 import img2 from "../assets/images/main_door/img14.jpg";
-import img3 from "../assets/images/murals/mural2.jpg";
+import img3 from "../assets/images/murals/mural2.webp";
 
 import img4 from "../assets/images/accessories/acc1.jpg";
 import img5 from "../assets/images/railings/railing8.jpg";
@@ -22,7 +22,7 @@ import img7 from "../assets/images/accessories/acc11.jpg";
 
 import img1Mobile from "../assets/images/gates/gate2.jpg";
 import img2Mobile from "../assets/images/railings/railing3.jpg";
-import img3Mobile from "../assets/images/murals/mural3.jpg";
+import img3Mobile from "../assets/images/murals/mural3.webp";
 interface HeroProps {
   onNavigate: (page: string) => void;
 }
