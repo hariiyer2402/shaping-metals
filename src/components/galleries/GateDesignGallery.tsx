@@ -1,6 +1,6 @@
-import gate1 from '../../assets/images/Gates/gate 01.webp';
-import gate2 from '../../assets/images/Gates/gate 02.webp';
-import gate3 from '../../assets/images/Gates/gate 03.webp';
+import gate1 from '../../assets/images/gates/gate 01.webp';
+import gate2 from '../../assets/images/gates/gate 02.webp';
+import gate3 from '../../assets/images/gates/gate 03.webp';
 
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
