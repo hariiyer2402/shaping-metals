@@ -128,252 +128,407 @@ export default function Hero({ onNavigate }: HeroProps) {
   return (
     <>
       {/* Main Hero Section */}
-      <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Images */}
-        {heroSlides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-all duration-[2000ms] ease-out ${
-              index === current
-                ? "opacity-100 scale-100"
-                : "opacity-0 scale-105"
-            }`}
-          >
-            <img
-              src={slide.image}
-              alt={slide.title}
-              className="hidden md:block w-full h-full object-cover"
-            />
-            <img
-              src={slide.mobileImage}
-              alt={slide.title}
-              className="block md:hidden w-full h-full object-cover"
-            />
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
-          </div>
-        ))}
+{/* Main Hero Section */}
+<section
+  className="
+    relative
+    w-full
+    h-screen
+    max-md:h-[100svh]
+    overflow-hidden
+  "
+>
+  {/* Background Images */}
+  {heroSlides.map((slide, index) => (
+    <div
+      key={index}
+      className={`absolute inset-0 transition-all duration-[2000ms] ease-out ${
+        index === current
+          ? "opacity-100 scale-100"
+          : "opacity-0 scale-105"
+      }`}
+    >
+      {/* Desktop Image */}
+      <img
+        src={slide.image}
+        alt={slide.title}
+        className="hidden md:block w-full h-full object-cover"
+      />
 
-        {/* Content */}
-        <div className="relative z-10 h-full flex flex-col justify-center">
-          <div className="max-w-7xl mx-auto px-8 lg:px-16 w-full">
-            {/* Subtitle */}
-            <div
-              className={`overflow-hidden mb-4 transition-all duration-1000 delay-300 ${
-                isLoaded ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              <p
-                className={`text-primary-gold text-sm uppercase tracking-[0.4em] font-sans font-light transition-transform duration-1000 ${
-                  isLoaded ? "translate-y-0" : "translate-y-full"
-                }`}
-              >
-                {heroSlides[current].subtitle}
-              </p>
-            </div>
+      {/* Mobile Image */}
+      <img
+        src={slide.mobileImage}
+        alt={slide.title}
+        className="
+          block
+          md:hidden
+          w-full
+          h-full
+          object-cover
+          object-center
+        "
+      />
 
-            {/* Main Title */}
-            <div className="overflow-hidden">
-              <h1
-                key={current}
-                className="text-white font-serif text-4xl md:text-7xl lg:text-7xl xl:text-8xl font-normal leading-none tracking-tight animate-slide-up"
-              >
-                {heroSlides[current].title.split(" ").map((word, i) => (
-                  <span key={i} className="block">
-                    {word}
-                  </span>
-                ))}
-              </h1>
-            </div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
+    </div>
+  ))}
 
-            {/* Description */}
-            <div
-              className={`mt-8 max-w-lg transition-all duration-1000 delay-400 ${
-                isLoaded ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              <p className="text-white/70 text-lg font-sans font-light leading-relaxed">
-                {heroSlides[current].description}
-              </p>
-            </div>
-
-            {/* Decorative Line */}
-            <div
-              className={`mt-10 mb-8 transition-all duration-1000 delay-500 ${
-                isLoaded ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              <div className="h-px w-24 bg-gradient-to-r from-primary-gold to-transparent" />
-            </div>
-
-            {/* CTA Buttons */}
-            <div
-              className={`flex flex-wrap gap-6 transition-all duration-1000 delay-700 ${
-                isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-            >
-              <button
-                onClick={() => onNavigate("gallery")}
-                className="group flex items-center gap-4 bg-primary-gold text-primary-navy px-6 md:px-8 py-3 md:py-4 hover:bg-white transition-colors duration-500"
-              >
-                <span className="text-sm uppercase tracking-[0.2em] font-sans font-medium">
-                  View Gallery
-                </span>
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
-              <button
-                onClick={() => onNavigate("projects")}
-                className="group flex items-center gap-4 text-white hover:text-primary-gold transition-colors duration-500 border border-white/30 px-6 md:px-8 py-3 md:py-4 hover:border-primary-gold"
-              >
-                <span className="text-sm uppercase tracking-[0.2em] font-sans font-light">
-                  Our Projects
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-32 left-8 lg:left-16 z-20 flex flex-col gap-3">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrent(index)}
-              className="group flex items-center gap-4"
-            >
-              <span
-                className={`block h-px transition-all duration-500 ${
-                  index === current
-                    ? "w-12 bg-primary-gold"
-                    : "w-6 bg-white/40 group-hover:bg-white/70"
-                }`}
-              />
-              <span
-                className={`text-xs font-sans tracking-wider transition-all duration-500 ${
-                  index === current
-                    ? "text-primary-gold opacity-100"
-                    : "text-white/40 opacity-0 group-hover:opacity-100"
-                }`}
-              >
-                0{index + 1}
-              </span>
-            </button>
-          ))}
-        </div>
-
-        {/* Scroll Indicator */}
-        <button
-          onClick={scrollToContent}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-white/60 hover:text-primary-gold transition-colors duration-500 group"
+  {/* Content */}
+  <div
+    className="
+      relative
+      z-10
+      h-full
+      flex
+      flex-col
+      justify-center
+    "
+  >
+    <div
+      className="
+        w-full
+        max-w-7xl
+        mx-auto
+        px-8
+        lg:px-16
+        max-md:px-6
+      "
+    >
+      {/* Subtitle */}
+      <div
+        className={`overflow-hidden mb-4 transition-all duration-1000 delay-300 ${
+          isLoaded ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <p
+          className={`text-primary-gold text-sm uppercase tracking-[0.4em] font-sans font-light transition-transform duration-1000 ${
+            isLoaded ? "translate-y-0" : "translate-y-full"
+          }`}
         >
-          <span className="text-[10px] uppercase tracking-[0.3em] font-sans">
-            Scroll
+          {heroSlides[current].subtitle}
+        </p>
+      </div>
+
+      {/* Main Title */}
+      <div className="overflow-hidden">
+        <h1
+          key={current}
+          className="
+            text-white
+            font-serif
+            text-4xl
+            md:text-7xl
+            lg:text-7xl
+            xl:text-8xl
+            max-md:text-[clamp(2.5rem,11vw,5.5rem)]
+            font-normal
+            leading-none
+            md:leading-none
+            max-md:leading-[0.95]
+            tracking-tight
+            animate-slide-up
+          "
+        >
+          {heroSlides[current].title.split(" ").map((word, i) => (
+            <span key={i} className="block">
+              {word}
+            </span>
+          ))}
+        </h1>
+      </div>
+
+      {/* Description */}
+      <div
+        className={`mt-8 max-w-lg transition-all duration-1000 delay-400 ${
+          isLoaded ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <p
+          className="
+            text-white/70
+            text-lg
+            max-md:text-[clamp(1rem,4.5vw,1.25rem)]
+            font-sans
+            font-light
+            leading-relaxed
+            max-md:max-w-[92vw]
+          "
+        >
+          {heroSlides[current].description}
+        </p>
+      </div>
+
+      {/* Decorative Line */}
+      <div
+        className={`mt-10 mb-8 transition-all duration-1000 delay-500 ${
+          isLoaded ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <div className="h-px w-24 bg-gradient-to-r from-primary-gold to-transparent" />
+      </div>
+
+      {/* CTA Buttons */}
+      <div
+        className={`flex flex-wrap gap-6 max-md:flex-col max-md:gap-4 transition-all duration-1000 delay-700 ${
+          isLoaded
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-8"
+        }`}
+      >
+        {/* View Gallery */}
+        <button
+          onClick={() => onNavigate("gallery")}
+          className="
+            group
+            flex
+            items-center
+            gap-4
+            bg-primary-gold
+            text-primary-navy
+            px-6
+            md:px-8
+            py-3
+            md:py-4
+            max-md:w-full
+            max-md:justify-center
+            hover:bg-white
+            transition-colors
+            duration-500
+          "
+        >
+          <span className="text-sm uppercase tracking-[0.2em] font-sans font-medium">
+            View Gallery
           </span>
-          <ChevronDown
-            size={20}
-            className="animate-bounce group-hover:text-primary-gold"
+
+          <ArrowRight
+            size={18}
+            className="group-hover:translate-x-1 transition-transform duration-300"
           />
         </button>
-{/* ---------------------------------------------------------------------------------------------------------------------------------- */}
-        {/* Side Text */}
-{/* Floating Quick Actions */}
-{/* ================= DESKTOP ================= */}
-<div className="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2 z-50">
-  <div className="w-72 bg-[#08131f]/95 backdrop-blur-md border border-white/10 rounded-l-2xl shadow-2xl overflow-hidden">
+
+        {/* Our Projects */}
+        <button
+          onClick={() => onNavigate("projects")}
+          className="
+            group
+            flex
+            items-center
+            gap-4
+            text-white
+            hover:text-primary-gold
+            transition-colors
+            duration-500
+            border
+            border-white/30
+            px-6
+            md:px-8
+            py-3
+            md:py-4
+            max-md:w-full
+            max-md:justify-center
+            hover:border-primary-gold
+          "
+        >
+          <span className="text-sm uppercase tracking-[0.2em] font-sans font-light">
+            Our Projects
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {/* ================= SLIDE INDICATORS ================= */}
+  {/* Slide Indicators */}
+<div
+  className="
+    hidden
+    sm:flex
+    absolute
+    left-6
+    sm:left-8
+    lg:left-16
+    z-20
+    flex-col
+    gap-3
+    bottom-[6.5rem]
+    md:bottom-32
+  "
+>
+  {heroSlides.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => setCurrent(index)}
+      className="group flex items-center gap-4"
+    >
+      <span
+        className={`block h-px transition-all duration-500 ${
+          index === current
+            ? "w-12 bg-primary-gold"
+            : "w-6 bg-white/40"
+        }`}
+      />
+
+      <span
+        className={`text-xs font-sans tracking-wider ${
+          index === current
+            ? "text-primary-gold opacity-100"
+            : "opacity-0"
+        }`}
+      >
+        0{index + 1}
+      </span>
+    </button>
+  ))}
+</div>
+
+<div
+  className="
+    xl:hidden
+    absolute
+    inset-x-0
+    bottom-0
+    z-30
+    flex
+    flex-col
+    items-center
+    gap-3
+    pb-[max(0.75rem,env(safe-area-inset-bottom))]
+  "
+>
+  {/* Scroll Indicator */}
+  <button
+    onClick={scrollToContent}
+    className="flex flex-col items-center gap-1 text-white/60 hover:text-primary-gold transition-colors duration-500"
+  >
+    <span className="text-[10px] uppercase tracking-[0.3em] font-sans">
+      Scroll
+    </span>
+    <ChevronDown size={18} className="animate-bounce" />
+  </button>
+
+
+  {/* ================= DESKTOP QUICK ACTIONS ================= */}
+  <div className="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2 z-50">
+    <div className="w-72 bg-[#08131f]/95 backdrop-blur-md border border-white/10 rounded-l-2xl shadow-2xl overflow-hidden">
+      {quickActions.map((item, index) => {
+        const Icon = item.icon;
+
+        return (
+          <button
+            key={index}
+            onClick={item.action}
+            className={`group w-full flex items-center justify-between px-6 py-6 hover:bg-primary-gold/10 transition-all duration-300 ${
+              index !== quickActions.length - 1
+                ? "border-b border-white/10"
+                : ""
+            }`}
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full border border-primary-gold flex items-center justify-center group-hover:bg-primary-gold transition-all duration-300">
+                <Icon
+                  size={20}
+                  className="text-primary-gold group-hover:text-primary-navy"
+                />
+              </div>
+
+              <span className="text-white text-sm font-light">
+                {item.title}
+              </span>
+            </div>
+
+            <ArrowRight
+              size={18}
+              className="text-white/60 group-hover:text-primary-gold group-hover:translate-x-1 transition-all duration-300"
+            />
+          </button>
+        );
+      })}
+    </div>
+  </div>
+
+  {/* ================= MOBILE QUICK ACTIONS ================= */}
+    <div
+    className="
+      flex
+      flex-row
+      items-center
+      justify-center
+      w-full
+      px-4
+      gap-[clamp(0.55rem,2.8vw,1rem)]
+    "
+  >
     {quickActions.map((item, index) => {
       const Icon = item.icon;
-
       return (
         <button
           key={index}
           onClick={item.action}
-          className={`group w-full flex items-center justify-between px-6 py-6 hover:bg-primary-gold/10 transition-all duration-300 ${
-            index !== quickActions.length - 1
-              ? "border-b border-white/10"
-              : ""
-          }`}
+          aria-label={item.title}
+          className="
+            w-[clamp(2.9rem,12vw,3.6rem)]
+            h-[clamp(2.9rem,12vw,3.6rem)]
+            shrink-0
+            rounded-full
+            bg-[#08131f]/95
+            border
+            border-primary-gold
+            flex
+            items-center
+            justify-center
+            shadow-xl
+            transition-all
+            duration-300
+          "
         >
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full border border-primary-gold flex items-center justify-center group-hover:bg-primary-gold transition-all duration-300">
-              <Icon
-                size={20}
-                className="text-primary-gold group-hover:text-primary-navy"
-              />
-            </div>
-
-            <span className="text-white text-sm font-light">
-              {item.title}
-            </span>
-          </div>
-
-          <ArrowRight
-            size={18}
-            className="text-white/60 group-hover:text-primary-gold group-hover:translate-x-1 transition-all duration-300"
-          />
+          <Icon size={20} className="text-primary-gold" />
         </button>
       );
     })}
   </div>
 </div>
 
-{/* ================= MOBILE ================= */}
+{/* ------------------------------------------------------------------------------------------------------- */}
 
-<div className="    xl:hidden
-    xl:hidden
-    absolute
-    bottom-24
-    left-1/2
-    -translate-x-1/2
-    z-30
-    flex
-    flex-row
-    gap-3
-  ">
+  {/* Decorative Corner Elements */}
+  <div
+    className="
+      absolute
+      top-24
+      left-8
+      lg:left-16
+      w-16
+      h-16
+      border-l
+      border-t
+      border-white/10
 
-  {quickActions.map((item, index) => {
+      max-md:top-20
+      max-md:left-6
+      max-md:w-12
+      max-md:h-12
+    "
+  />
 
-    const Icon = item.icon;
+  <div
+    className="
+      absolute
+      bottom-24
+      right-8
+      lg:right-16
+      w-16
+      h-16
+      border-r
+      border-b
+      border-white/10
 
-    return (
-
-      <button
-        key={index}
-        onClick={item.action}
-        className="
-w-12
-h-12
-        rounded-full
-        bg-[#08131f]/95
-        border
-        border-primary-gold
-        flex
-        items-center
-        justify-center
-        shadow-xl
-        hover:bg-primary-gold
-        transition-all
-        duration-300
-        "
-      >
-
-        <Icon
-          size={22}
-          className="text-primary-gold hover:text-primary-navy"
-        />
-
-      </button>
-
-    );
-
-  })}
-
-</div>
-{/* -------------------------------------------------------------------------------------------------------------------------------- */}
-
-        {/* Decorative Corner Elements */}
-        <div className="absolute top-24 left-8 lg:left-16 w-16 h-16 border-l border-t border-white/10" />
-        <div className="absolute bottom-24 right-8 lg:right-16 w-16 h-16 border-r border-b border-white/10" />
+      max-md:right-6
+      max-md:w-12
+      max-md:h-12
+    "
+  />
       </section>
 
       {/* Featured Categories - Clickable Images */}
