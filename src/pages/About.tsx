@@ -1,7 +1,14 @@
-import { Target, Users, Lightbulb, Hammer } from 'lucide-react';
+import {
+  Target,
+  Users,
+  Lightbulb,
+  Hammer,
+  ArrowRight,
+  ChevronDown,
+} from 'lucide-react';
 <link rel="icon" type="image/png" href="/logo.png" />
-import heroImg from '../assets/images/gates/gate9.jpg';
 import storyImg from '../assets/images/gates/gate10.jpg';
+import metalRing from "../assets/images/about/about6.png";
 
 
 import { useSEO } from '../hooks/useSEO';
@@ -41,29 +48,272 @@ export default function About({ onNavigate }: AboutProps) {
 
   return (
     <div className="min-h-screen">
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={heroImg}
-            alt="About Shaping Metals"
-            className="w-full h-full object-cover"
+      <section
+  className="
+    relative
+min-h-[100svh]
+lg:min-h-[680px]
+    overflow-hidden
+    bg-[#07090C]
+    text-white
+  "
+>
+  {/* Ambient gold glow */}
+  <div
+    className="
+      absolute
+      -top-32
+      -right-32
+      w-[520px]
+      h-[520px]
+      rounded-full
+      bg-[#C9A45C]/8
+      blur-[120px]
+      pointer-events-none
+    "
+  />
+
+  {/* Architectural background lines */}
+  <div className="absolute inset-0 pointer-events-none opacity-[0.12]">
+    <div className="absolute top-1/2 left-0 right-0 h-px bg-[#C9A45C]" />
+
+    <div className="absolute top-0 bottom-0 left-[8%] w-px bg-[#C9A45C]" />
+
+    <div className="absolute top-0 bottom-0 right-[8%] w-px bg-[#C9A45C]" />
+  </div>
+
+  <div
+    className="
+      relative
+      z-10
+      max-w-7xl
+      mx-auto
+      min-h-[620px]
+      md:min-h-[680px]
+      px-6
+sm:px-8
+lg:px-12
+flex
+items-center
+py-10
+lg:py-0
+    "
+  >
+    <div
+      className="
+        w-full
+        grid
+        grid-cols-1
+        lg:grid-cols-2
+        gap-4
+        lg:gap-20
+        items-center
+      "
+    >
+
+      {/* LEFT CONTENT */}
+      <div className="max-w-xl">
+
+        <p
+          className="
+            text-[#C9A45C]
+            text-xs
+            md:text-sm
+            uppercase
+            tracking-[0.45em]
+            mb-6
+          "
+        >
+          About Us
+        </p>
+
+        <h1
+          className="
+            font-serif
+            font-normal
+            text-5xl
+            sm:text-6xl
+            md:text-7xl
+            lg:text-8xl
+            leading-[0.92]
+            tracking-tight
+          "
+        >
+          Crafting
+          <br />
+
+          <span className="text-[#C9A45C]">
+            Excellence.
+          </span>
+        </h1>
+
+        <p
+          className="
+            mt-8
+            max-w-lg
+            text-white/60
+            text-base
+            md:text-lg
+            leading-relaxed
+            font-light
+          "
+        >
+          Where traditional craftsmanship meets contemporary
+          architectural design. We transform metal into enduring
+          expressions of art, precision and identity.
+        </p>
+
+        <button
+          onClick={() =>
+            document
+              .getElementById("about-story")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="
+            group
+            mt-8
+            inline-flex
+            items-center
+            gap-4
+            border
+            border-[#C9A45C]/70
+            px-7
+            py-3.5
+            text-[#C9A45C]
+            text-xs
+            uppercase
+            tracking-[0.25em]
+            transition-all
+            duration-500
+            hover:bg-[#C9A45C]
+            hover:text-[#07090C]
+          "
+        >
+          More About Us
+
+          <ArrowRight
+            size={17}
+            className="
+              transition-transform
+              duration-300
+              group-hover:translate-x-1
+            "
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40" />
+        </button>
+
+      </div>
+
+
+      {/* RIGHT PRODUCT */}
+      <div
+        className="
+          relative
+          flex
+          items-center
+          justify-center
+          min-h-[360px]
+          md:min-h-[460px]
+        "
+      >
+
+        {/* Outer ring */}
+        <div
+          className="
+            absolute
+            w-[250px]
+h-[250px]
+sm:w-[300px]
+sm:h-[300px]
+md:w-[460px]
+md:h-[460px]
+            rounded-full
+            border
+            border-[#C9A45C]/30
+          "
+        />
+
+        {/* Middle ring */}
+        <div
+          className="
+            absolute
+w-[220px]
+h-[220px]
+sm:w-[270px]
+sm:h-[270px]
+md:w-[410px]
+md:h-[410px]
+            rounded-full
+            border
+            border-[#C9A45C]/15
+          "
+        />
+
+        {/* Product */}
+        <div
+          className="
+            relative
+            z-10
+w-[190px]
+h-[190px]
+sm:w-[230px]
+sm:h-[230px]
+md:w-[340px]
+md:h-[340px]
+            flex
+            items-center
+            justify-center
+          "
+        >
+          <img
+            src={metalRing}
+            alt="Shaping Metals craftsmanship"
+            className="
+              max-w-full
+              max-h-full
+              object-contain
+              drop-shadow-[0_20px_50px_rgba(0,0,0,0.6)]
+            "
+          />
         </div>
 
-        <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-6xl font-serif font-bold mb-6">
-            Forging the Future of
-            <br />
-            <span className="text-[#C9A45C]">Architectural Metalwork</span>
-          </h1>
-          <p className="text-xl text-gray-200">
-            Where artistry meets engineering excellence
-          </p>
-        </div>
-      </section>
+      </div>
 
-      <section className="py-12 md:py-24 bg-[#F5F6F7]">
+    </div>
+  </div>
+
+  {/* Scroll */}
+  <div
+    className="
+      absolute
+      bottom-5
+      left-1/2
+      -translate-x-1/2
+      flex
+      flex-col
+      items-center
+      gap-2
+      text-white/35
+    "
+  >
+    <span className="text-[9px] uppercase tracking-[0.35em]">
+      Scroll
+    </span>
+
+    <ChevronDown
+      size={16}
+      className="text-[#C9A45C] animate-bounce"
+    />
+  </div>
+
+</section>
+
+
+{/* ---------------------------------------------------------------------------------------------------------- */}
+
+      <section
+  id="about-story"
+  className="py-12 md:py-24 bg-[#F5F6F7]"
+>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-8 items-center">
             <div>

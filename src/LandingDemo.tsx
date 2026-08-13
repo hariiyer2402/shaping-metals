@@ -78,7 +78,7 @@ export default function LandingDemo({ onNavigate }: any) {
 
             <h3 className="text-xl text-[#C6A46A] mb-3">
 
-              Custom Fabrication
+              Customisation 
 
             </h3>
 

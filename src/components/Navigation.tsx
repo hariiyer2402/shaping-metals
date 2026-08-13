@@ -117,44 +117,50 @@ export default function Navbar({
           <div className="flex md:hidden items-center justify-between w-full">
 
             {/* Logo + Title */}
-            <button
-              onClick={() => handleClick("home")}
-              className="flex items-center gap-3"
-            >
-              <img
-                src={logo}
-                alt="Logo"
-                className="h-12 w-12 object-contain"
-              />
+           {/* Logo + Title */}
+{/* Logo + Title */}
+<button
+  onClick={() => handleClick("home")}
+  className="flex items-center gap-0 shrink-4"
+>
+  <img
+    src={logo}
+    alt="Logo"
+    className="h-18 w-20 object-contain"
+  />
 
-              <div className="text-left">
-                <h1
-                  className="text-lg font-bold leading-none"
-                  style={{
-                    fontFamily: "Cinzel, serif",
-                    background:
-                      "linear-gradient(180deg,#3a3936 0%,#c7b13f 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  SHAPING METALS
-                </h1>
+  <div className="text-left -ml-3">
+    <h1
+      className="text-xl font-bold leading-none tracking-wide whitespace-nowrap"
+      style={{
+        fontFamily: "Cinzel, serif",
+        background:
+          "linear-gradient(180deg, #3a3936 0%, #c7b13f 100%)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        backgroundClip: "text",
+      }}
+    >
+      SHAPING METALS
+    </h1>
 
-                <p
-                  className="text-[10px] tracking-[0.18em]"
-                  style={{
-                    fontFamily: "Cinzel, serif",
-                    background:
-                      "linear-gradient(180deg,#3a3936 0%,#c7b13f 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  Exploring Innovations
-                </p>
-              </div>
-            </button>
+    <div className="flex justify-end mt-1">
+      <p
+        className="-mt-1 text-xs font-semibold tracking-[0.08em] whitespace-nowrap"
+        style={{
+          fontFamily: "Cinzel, serif",
+          background:
+            "linear-gradient(180deg, #3a3936 0%, #c7b13f 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+        }}
+      >
+        Exploring Innovations
+      </p>
+    </div>
+  </div>
+</button>
 
             <button
               onClick={() => setIsOpen(!isOpen)}

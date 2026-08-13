@@ -245,7 +245,7 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 md:py-20 bg-primary-navy">
+      {/* <section className="py-12 md:py-20 bg-primary-navy">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
@@ -266,7 +266,7 @@ export default function Gallery({ onNavigate, initialCategory }: GalleryProps) {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-12 md:py-24 text-center">

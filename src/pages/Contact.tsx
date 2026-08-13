@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, Send } from 'lucide-react';
-import contactHero from '../assets/images/gates/gate11.jpg';
+import contactHero from '../assets/images/poojaroom/03.webp';
 <link rel="icon" type="image/png" href="/logo.png" />
 
 import { useSEO } from '../hooks/useSEO';

@@ -1,6 +1,6 @@
 import mural1 from '../../assets/images/murals/mural1.webp';
 import mural2 from '../../assets/images/murals/mural2.webp';
-import mural3 from '../../assets/images/murals/mural3.webp';
+import mural3 from '../../assets/images/murals/mural11.webp';
 import mural4 from '../../assets/images/murals/mural8.webp';
 import mural5 from '../../assets/images/murals/mural9.webp';
 import mural6 from '../../assets/images/murals/mural10.webp';

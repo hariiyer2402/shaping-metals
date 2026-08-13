@@ -632,7 +632,7 @@ export default function Hero({ onNavigate }: HeroProps) {
                 Our master craftsmen combine traditional techniques with contemporary innovation 
                 to create pieces that define spaces and inspire awe.
               </p>
-              <div className="flex gap-12 mb-10">
+              {/* <div className="flex gap-12 mb-10">
                 <div>
                   <p className="text-primary-gold font-serif text-4xl md:text-5xl">6+</p>
                   <p className="text-white/50 text-sm uppercase tracking-wider font-sans mt-1">Years</p>
@@ -645,7 +645,7 @@ export default function Hero({ onNavigate }: HeroProps) {
                   <p className="text-primary-gold font-serif text-4xl md:text-5xl">50+</p>
                   <p className="text-white/50 text-sm uppercase tracking-wider font-sans mt-1">Artisans</p>
                 </div>
-              </div>
+              </div> */}
               <button
                 onClick={() => onNavigate("about")}
                 className="group flex items-center gap-4 text-white hover:text-primary-gold transition-colors duration-500"
