@@ -169,7 +169,7 @@ return (
 
   <div>
     <h2 className="text-3xl md:text-5xl font-serif mb-6">
-      Craftsmanship Since 2020
+      Timeless Craftsmanship
     </h2>
     <p className="text-gray-300 text-lg mb-6">
       With over a decade of experience, we specialize in creating bespoke

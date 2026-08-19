@@ -59,7 +59,7 @@ export default function Hero({ onNavigate }: HeroProps) {
   {
     title: "Chat on WhatsApp",
     icon: MessageCircle,
-    action: () => window.open("https://wa.me/919741002354", "_blank"),
+    action: () => window.open("https://wa.me/916362843722", "_blank"),
   },
   
   {
@@ -383,9 +383,10 @@ export default function Hero({ onNavigate }: HeroProps) {
   ))}
 </div>
 
+{/* ================= MOBILE SCROLL INDICATOR ================= */}
 <div
   className="
-    xl:hidden
+    md:hidden
     absolute
     inset-x-0
     bottom-0
@@ -397,97 +398,192 @@ export default function Hero({ onNavigate }: HeroProps) {
     pb-[max(0.75rem,env(safe-area-inset-bottom))]
   "
 >
-  {/* Scroll Indicator */}
   <button
     onClick={scrollToContent}
-    className="flex flex-col items-center gap-1 text-white/60 hover:text-primary-gold transition-colors duration-500"
+    className="
+      flex
+      flex-col
+      items-center
+      gap-1
+      text-white/60
+      hover:text-primary-gold
+      transition-colors
+      duration-500
+    "
   >
     <span className="text-[10px] uppercase tracking-[0.3em] font-sans">
       Scroll
     </span>
+
     <ChevronDown size={18} className="animate-bounce" />
   </button>
+</div>
 
 
-  {/* ================= DESKTOP QUICK ACTIONS ================= */}
-  <div className="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2 z-50">
-    <div className="w-72 bg-[#08131f]/95 backdrop-blur-md border border-white/10 rounded-l-2xl shadow-2xl overflow-hidden">
-      {quickActions.map((item, index) => {
-        const Icon = item.icon;
-
-        return (
-          <button
-            key={index}
-            onClick={item.action}
-            className={`group w-full flex items-center justify-between px-6 py-6 hover:bg-primary-gold/10 transition-all duration-300 ${
-              index !== quickActions.length - 1
-                ? "border-b border-white/10"
-                : ""
-            }`}
-          >
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full border border-primary-gold flex items-center justify-center group-hover:bg-primary-gold transition-all duration-300">
-                <Icon
-                  size={20}
-                  className="text-primary-gold group-hover:text-primary-navy"
-                />
-              </div>
-
-              <span className="text-white text-sm font-light">
-                {item.title}
-              </span>
-            </div>
-
-            <ArrowRight
-              size={18}
-              className="text-white/60 group-hover:text-primary-gold group-hover:translate-x-1 transition-all duration-300"
-            />
-          </button>
-        );
-      })}
-    </div>
-  </div>
-
-  {/* ================= MOBILE QUICK ACTIONS ================= */}
-    <div
+{/* =======================================================
+    DESKTOP QUICK ACTIONS
+    ======================================================= */}
+<div
+  className="
+    absolute
+    left-1/2
+    bottom-8
+    -translate-x-1/2
+    z-[100]
+    hidden
+    md:flex
+    items-center
+    justify-center
+  "
+>
+  <div
     className="
       flex
-      flex-row
       items-center
       justify-center
-      w-full
-      px-4
-      gap-[clamp(0.55rem,2.8vw,1rem)]
+      gap-5
+      lg:gap-7
+      xl:gap-8
+      px-5
+      py-3
+      rounded-full
+      bg-black/20
+      backdrop-blur-md
+      border
+      border-white/10
+      shadow-[0_15px_50px_rgba(0,0,0,0.35)]
     "
   >
     {quickActions.map((item, index) => {
       const Icon = item.icon;
+
       return (
         <button
           key={index}
           onClick={item.action}
           aria-label={item.title}
+          title={item.title}
           className="
-            w-[clamp(2.9rem,12vw,3.6rem)]
-            h-[clamp(2.9rem,12vw,3.6rem)]
-            shrink-0
-            rounded-full
-            bg-[#08131f]/95
-            border
-            border-primary-gold
+            group
+            relative
             flex
             items-center
             justify-center
-            shadow-xl
+            w-[68px]
+            h-[68px]
+            lg:w-[74px]
+            lg:h-[74px]
+            xl:w-[78px]
+            xl:h-[78px]
+            rounded-full
+            bg-[#08131f]/90
+            backdrop-blur-xl
+            border
+            border-primary-gold/80
+            shadow-[0_8px_30px_rgba(0,0,0,0.35)]
             transition-all
-            duration-300
+            duration-500
+            hover:scale-110
+            hover:bg-primary-gold
+            hover:border-primary-gold
+            hover:shadow-[0_0_35px_rgba(212,170,80,0.35)]
           "
         >
-          <Icon size={20} className="text-primary-gold" />
+          <span
+            className="
+              absolute
+              inset-[5px]
+              rounded-full
+              border
+              border-primary-gold/20
+              group-hover:border-primary-navy/20
+              transition-all
+              duration-500
+            "
+          />
+
+          <Icon
+            size={25}
+            strokeWidth={1.7}
+            className="
+              relative
+              z-10
+              text-primary-gold
+              group-hover:text-primary-navy
+              transition-all
+              duration-500
+            "
+          />
+
+          <span
+            className="
+              absolute
+              inset-0
+              rounded-full
+              opacity-0
+              group-hover:opacity-100
+              bg-primary-gold/10
+              transition-opacity
+              duration-500
+            "
+          />
         </button>
       );
     })}
   </div>
+</div>
+
+
+{/* ================= MOBILE QUICK ACTIONS ================= */}
+<div
+  className="
+    md:hidden
+    absolute
+    left-0
+    right-0
+    bottom-16
+    z-[100]
+    flex
+    flex-row
+    items-center
+    justify-center
+    w-full
+    px-4
+    gap-[clamp(0.55rem,2.8vw,1rem)]
+  "
+>
+  {quickActions.map((item, index) => {
+    const Icon = item.icon;
+
+    return (
+      <button
+        key={index}
+        onClick={item.action}
+        aria-label={item.title}
+        title={item.title}
+        className="
+          w-[clamp(2.9rem,12vw,3.6rem)]
+          h-[clamp(2.9rem,12vw,3.6rem)]
+          shrink-0
+          rounded-full
+          bg-[#08131f]/95
+          border
+          border-primary-gold
+          flex
+          items-center
+          justify-center
+          shadow-xl
+          transition-all
+          duration-300
+        "
+      >
+        <Icon
+          size={20}
+          className="text-primary-gold"
+        />
+      </button>
+    );
+  })}
 </div>
 
 {/* ------------------------------------------------------------------------------------------------------- */}
@@ -531,6 +627,8 @@ export default function Hero({ onNavigate }: HeroProps) {
   />
       </section>
 
+      
+{/* ------------------------------------------------------------------------------------------------------------------------------------------ */}
       {/* Featured Categories - Clickable Images */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-8 lg:px-16">
