@@ -386,7 +386,7 @@ export default function Hero({ onNavigate }: HeroProps) {
 {/* ================= MOBILE SCROLL INDICATOR ================= */}
 <div
   className="
-    md:hidden
+    mx:hidden
     absolute
     inset-x-0
     bottom-0
