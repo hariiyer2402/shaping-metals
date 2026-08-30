@@ -418,7 +418,7 @@ md:h-[340px]
               },
               {
                 icon: Hammer,
-                title: "Timely Delivery & Installation",
+                title: "Timely Delivery",
               },
               {
                 icon: Target,
